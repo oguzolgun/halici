@@ -1,0 +1,495 @@
+[
+  {
+    "id": "rug-01",
+    "slug": "mira-kabartma-modern-hali",
+    "name": "Mira Mimari Kabartma",
+    "collection": "Atölye Modern",
+    "image": "/rugs/rug-01.jpg",
+    "gallery": ["/rugs/rug-01.jpg", "/rugs/rug-12.jpg", "/rugs/rug-03.jpg"],
+    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm", "240 x 340 cm"],
+    "sizeOptions": [
+      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 4650, "stock": 14 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 6890, "stock": 9 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 9450, "stock": 6 },
+      { "label": "240 x 340 cm", "widthCm": 240, "lengthCm": 340, "price": 12900, "stock": 3 }
+    ],
+    "priceFrom": 4650,
+    "tags": ["Çok Satan", "Kabartma Doku"],
+    "category": "Modern",
+    "style": "Minimalist",
+    "rooms": ["Salon & Oturma Odası", "Yatak Odası"],
+    "material": "Yün & Pamuk",
+    "colorFamily": "Krem & Bej",
+    "colorName": "Sıcak Kırık Beyaz & Vizon",
+    "colorHex": "#DDD3C4",
+    "variants": [
+      { "name": "Sıcak Kırık Beyaz & Vizon", "hex": "#DDD3C4", "slug": "mira-kabartma-modern-hali" },
+      { "name": "Ekru & Antrasit Çizgi", "hex": "#EBE6DC", "slug": "kuzey-ekru-kare-hali" },
+      { "name": "Duman Grisi", "hex": "#C5C6C7", "slug": "atlas-baklava-dokuma-hali" }
+    ],
+    "pileHeightMm": 11,
+    "origin": "Yerli Üretim — Gaziantep",
+    "weavingType": "Yüksek-alçak rölyef dokuma, pamuk atkı",
+    "bestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewCount": 48,
+    "shortDescription": "Yüksek ve alçak ilmek geçişleriyle ışığı yumuşakça yakalayan mimari yün dokuma.",
+    "description": "Mira Mimari Kabartma, modern Türk oturma odalarının doğal ışığına göre tasarlanmış iki katmanlı dokusuyla mekanı boğmadan derinlik kazandırır. Yün ve pamuk karışımlı ipliği toz tutmayan yapısıyla günlük kullanımda zahmetsizdir.",
+    "careInstructions": [
+      "Fırçasız başlıkla haftada bir düşük devirde süpürünüz.",
+      "Leke durumunda nemli beyaz bezle tamponlayarak temizleyiniz.",
+      "İlk birkaç hafta doğal yün lifi fazlasının çıkması normaldir."
+    ]
+  },
+  {
+    "id": "rug-02",
+    "slug": "iznik-eskitme-lacivert-madalyon",
+    "name": "İznik Eskitme Madalyon",
+    "collection": "Miras Koleksiyonu",
+    "image": "/rugs/rug-02.jpg",
+    "gallery": ["/rugs/rug-02.jpg", "/rugs/rug-08.jpg", "/rugs/rug-10.jpg"],
+    "sizes": ["80 x 150 cm", "80 x 300 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 3290, "stock": 12 },
+      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 5150, "stock": 7, "isRunner": true },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 7490, "stock": 8 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 10350, "stock": 4 }
+    ],
+    "priceFrom": 3290,
+    "tags": ["Çok Satan", "Yıkanabilir Taban"],
+    "category": "Vintage",
+    "style": "Vintage Eskitme",
+    "rooms": ["Salon & Oturma Odası", "Yemek Odası", "Antre & Koridor"],
+    "material": "Bambu İpeği & Akrilik",
+    "colorFamily": "Lacivert",
+    "colorName": "Çivit Lacivert & Kiremit",
+    "colorHex": "#2C4263",
+    "variants": [
+      { "name": "Çivit Lacivert & Kiremit", "hex": "#2C4263", "slug": "iznik-eskitme-lacivert-madalyon" },
+      { "name": "Zümrüt & Eskitme Altın", "hex": "#2B5B4B", "slug": "toprak-zumrut-vintage-hali" },
+      { "name": "Kraliyet Lacivert & Yakut", "hex": "#1F2A44", "slug": "hereke-klasik-madalyon-hali" }
+    ],
+    "pileHeightMm": 6,
+    "origin": "Yerli Üretim — Uşak",
+    "weavingType": "İnce havlı vintage eskitme dokuma",
+    "bestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewCount": 63,
+    "shortDescription": "Geleneksel Anadolu madalyon formunun lacivert ve kiremit patinayla modern yorumu.",
+    "description": "İznik Eskitme Madalyon, klasik salon halılarına güncel bir sıcaklık getirir. İnce hav yüksekliği sayesinde yemek masası altında sandalye hareketini kolaylaştırır, kaymaz pamuk tabanıyla zemine tam oturur.",
+    "careInstructions": [
+      "30°C hassas programda profesyonel halı yıkamaya uygundur.",
+      "Kimyasal ağartıcı ve sert fırça kullanmayınız.",
+      "Doğrudan güneş ışığına uzun süre maruz bırakmaktan kaçınınız."
+    ]
+  },
+  {
+    "id": "rug-03",
+    "slug": "atlas-baklava-dokuma-hali",
+    "name": "Atlas Baklava Dokuma",
+    "collection": "Kuzey Konfor",
+    "image": "/rugs/rug-03.jpg",
+    "gallery": ["/rugs/rug-03.jpg", "/rugs/rug-01.jpg", "/rugs/rug-06.jpg"],
+    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 4190, "stock": 18 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 6290, "stock": 11 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 8690, "stock": 5 }
+    ],
+    "priceFrom": 4190,
+    "tags": ["Yumuşak Hav", "Aile Dostu"],
+    "category": "Modern",
+    "style": "Minimalist",
+    "rooms": ["Salon & Oturma Odası", "Yatak Odası"],
+    "material": "Yün & Pamuk",
+    "colorFamily": "Gri",
+    "colorName": "Güvercin Grisi & Krem",
+    "colorHex": "#B9BCC0",
+    "variants": [
+      { "name": "Güvercin Grisi & Krem", "hex": "#B9BCC0", "slug": "atlas-baklava-dokuma-hali" },
+      { "name": "Krem & Lacivert Biyeli", "hex": "#EFE9DC", "slug": "bodrum-krem-biyeli-yun-hali" }
+    ],
+    "pileHeightMm": 14,
+    "origin": "Yerli Üretim — Gaziantep",
+    "weavingType": "Berber düğüm tekniği, pamuk taban",
+    "bestseller": false,
+    "isNew": true,
+    "rating": 4.9,
+    "reviewCount": 31,
+    "shortDescription": "Yumuşak güvercin grisi zemin üzerinde kabartmalı krem baklava kafes deseni.",
+    "description": "Yatak odasından sabah adım attığınız anda sıcak ve dolgun bir his veren Atlas Baklava Dokuma, sık ilmekli Berber tekniğiyle ezilmeye karşı yüksek direnç gösterir.",
+    "careInstructions": [
+      "Düzenli aralıklarla halıyı 180 derece çevirerek eşit kullanım sağlayınız.",
+      "Süpürme işlemini hav yönünde fırçasız başlıkla yapınız."
+    ]
+  },
+  {
+    "id": "rug-04",
+    "slug": "ege-orgu-dogal-jut-hali",
+    "name": "Ege Örgü Doğal Jüt",
+    "collection": "Topraktan",
+    "image": "/rugs/rug-04.jpg",
+    "gallery": ["/rugs/rug-04.jpg", "/rugs/rug-05.jpg", "/rugs/rug-01.jpg"],
+    "sizes": ["80 x 150 cm", "80 x 300 cm", "140 x 200 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 2490, "stock": 22 },
+      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 3890, "stock": 10, "isRunner": true },
+      { "label": "140 x 200 cm", "widthCm": 140, "lengthCm": 200, "price": 4390, "stock": 15 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 5490, "stock": 9 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 7690, "stock": 6 }
+    ],
+    "priceFrom": 2490,
+    "tags": ["%100 Doğal Lif", "El Örgüsü"],
+    "category": "Doğal",
+    "style": "Bohem & Doğal",
+    "rooms": ["Yemek Odası", "Salon & Oturma Odası", "Antre & Koridor"],
+    "material": "Doğal Jüt & Sisal",
+    "colorFamily": "Toprak & Terracotta",
+    "colorName": "Altın Hasır",
+    "colorHex": "#C8A472",
+    "variants": [
+      { "name": "Altın Hasır", "hex": "#C8A472", "slug": "ege-orgu-dogal-jut-hali" },
+      { "name": "Krem & Lacivert Biyeli", "hex": "#F1ECE1", "slug": "bodrum-krem-biyeli-yun-hali" }
+    ],
+    "pileHeightMm": 8,
+    "origin": "Yerli İşçilik — Denizli",
+    "weavingType": "Kalın saç örgü hasır dokuma",
+    "bestseller": true,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewCount": 54,
+    "shortDescription": "Katkısız altın jüt liflerinin sıkı saç örgü tekniğiyle dokunduğu zamansız doğal halı.",
+    "description": "Ege Örgü Doğal Jüt, masa altlarında, antrelerde ve kış bahçelerinde doğal bir zemin oluşturur. Çift taraflı kullanıma uygun örgüsü sayesinde uzun yıllar formunu korur.",
+    "careInstructions": [
+      "Sadece kuru temizleme veya düşük nemli bezle silme önerilir.",
+      "Sıvı temasını hızla kuru havluyla emdiriniz, ıslak bırakmayınız."
+    ]
+  },
+  {
+    "id": "rug-05",
+    "slug": "anadolu-geometrik-kilim",
+    "name": "Anadolu Geometrik Kilim",
+    "collection": "Zanaat Serisi",
+    "image": "/rugs/rug-05.jpg",
+    "gallery": ["/rugs/rug-05.jpg", "/rugs/rug-11.jpg", "/rugs/rug-02.jpg"],
+    "sizes": ["80 x 150 cm", "120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 2950, "stock": 11 },
+      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 4450, "stock": 14 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 6790, "stock": 7 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 9250, "stock": 3 }
+    ],
+    "priceFrom": 2950,
+    "tags": ["Yeni Sezon", "El Tezgahı İlhamlı"],
+    "category": "Doğal",
+    "style": "Anadolu & Kilim",
+    "rooms": ["Salon & Oturma Odası", "Yemek Odası", "Antre & Koridor"],
+    "material": "Yün & Pamuk",
+    "colorFamily": "Toprak & Terracotta",
+    "colorName": "Krem, Kiremit & Gece Laciverti",
+    "colorHex": "#B65336",
+    "variants": [
+      { "name": "Krem, Kiremit & Gece Laciverti", "hex": "#B65336", "slug": "anadolu-geometrik-kilim" },
+      { "name": "Toprak Mozaik", "hex": "#C2603E", "slug": "kapadokya-patchwork-kilim" }
+    ],
+    "pileHeightMm": 5,
+    "origin": "Yerli Üretim — Uşak",
+    "weavingType": "Düz dokuma kilim, doğal pamuk saçak",
+    "bestseller": true,
+    "isNew": true,
+    "rating": 5.0,
+    "reviewCount": 29,
+    "shortDescription": "Seç halı medalyonundan ilham alan krem zeminli kiremit ve lacivert Anadolu kilimi.",
+    "description": "Anadolu Geometrik Kilim, geleneksel yıldız ve bereket motiflerini ferah kırık beyaz zeminle dengeler. Hafif yapısı sayesinde mevsimsel değişimlerde kolayca taşınır ve süpürülür.",
+    "careInstructions": [
+      "Soğuk suyla elde veya profesyonel düz kilim yıkamayla temizleyiniz.",
+      "Saçak kısımlarını robot süpürgeye kaptırmamak için katlayabilirsiniz."
+    ]
+  },
+  {
+    "id": "rug-06",
+    "slug": "bodrum-krem-biyeli-yun-hali",
+    "name": "Bodrum Krem Biyeli Yün",
+    "collection": "Kuzey Konfor",
+    "image": "/rugs/rug-06.jpg",
+    "gallery": ["/rugs/rug-06.jpg", "/rugs/rug-03.jpg", "/rugs/rug-12.jpg"],
+    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 4890, "stock": 9 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 7190, "stock": 6 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 9890, "stock": 4 }
+    ],
+    "priceFrom": 4890,
+    "tags": ["Yumuşak Hav", "Doğal Yün"],
+    "category": "Doğal",
+    "style": "Minimalist",
+    "rooms": ["Yatak Odası", "Salon & Oturma Odası"],
+    "material": "Yün & Pamuk",
+    "colorFamily": "Krem & Bej",
+    "colorName": "Krem & Lacivert Çerçeve",
+    "colorHex": "#EFE9DC",
+    "variants": [
+      { "name": "Krem & Lacivert Çerçeve", "hex": "#EFE9DC", "slug": "bodrum-krem-biyeli-yun-hali" },
+      { "name": "Ekru & Antrasit Çizgi", "hex": "#E6E1D6", "slug": "kuzey-ekru-kare-hali" }
+    ],
+    "pileHeightMm": 18,
+    "origin": "Yerli Üretim — Gaziantep",
+    "weavingType": "Dolgun bukle yün dokuma, el dikişli biye",
+    "bestseller": false,
+    "isNew": true,
+    "rating": 4.9,
+    "reviewCount": 22,
+    "shortDescription": "Dolgun krem yün zeminini çevreleyen net lacivert bordürüyle sakin sahil evi zarafeti.",
+    "description": "Özellikle yatak odaları ve dingin dinlenme köşeleri için üretilen Bodrum Krem Biyeli Yün, 18 mm dolgun havıyla ayak altında pamuksu bir sıcaklık sunar.",
+    "careInstructions": [
+      "İlk aylarda nazikçe fırçasız süpürge ile temizleyiniz.",
+      "Yoğun lekelerde yün şampuanıyla soğuk su tamponu uygulayınız."
+    ]
+  },
+  {
+    "id": "rug-07",
+    "slug": "bulut-masali-cocuk-odasi-halisi",
+    "name": "Bulut Masalı Çocuk Halısı",
+    "collection": "Minik Adımlar",
+    "image": "/rugs/rug-07.jpg",
+    "gallery": ["/rugs/rug-07.jpg", "/rugs/rug-06.jpg"],
+    "sizes": ["100 x 150 cm", "120 x 180 cm", "160 x 230 cm"],
+    "sizeOptions": [
+      { "label": "100 x 150 cm", "widthCm": 100, "lengthCm": 150, "price": 2390, "stock": 19 },
+      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 3290, "stock": 14 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 4690, "stock": 8 }
+    ],
+    "priceFrom": 2390,
+    "tags": ["OEKO-TEX Sertifikalı", "Yıkanabilir"],
+    "category": "Çocuk",
+    "style": "Çocuk & Oyun",
+    "rooms": ["Çocuk Odası"],
+    "material": "Organik Pamuk",
+    "colorFamily": "Pastel",
+    "colorName": "Pudra Pembe & Mint Bulut",
+    "colorHex": "#E8C5C7",
+    "variants": [
+      { "name": "Pudra Pembe & Mint Bulut", "hex": "#E8C5C7", "slug": "bulut-masali-cocuk-odasi-halisi" },
+      { "name": "Sıcak Kırık Beyaz", "hex": "#EAE3D5", "slug": "mira-kabartma-modern-hali" }
+    ],
+    "pileHeightMm": 10,
+    "origin": "Yerli Üretim — Denizli",
+    "weavingType": "Tozsuz %100 organik pamuk tufting",
+    "bestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewCount": 42,
+    "shortDescription": "Zararlı boya içermeyen, makinede yıkanabilir, antialerjik organik pamuk çocuk halısı.",
+    "description": "Bebek ve çocuk odaları için özel olarak OEKO-TEX Standart 100 sertifikalı ipliklerle dokunan Bulut Masalı, tüy dökmeyen sıkı yüzeyi ve yumuşacık oyun zeminiyle ebeveynlerin ilk tercihidir.",
+    "careInstructions": [
+      "120x180 cm ve altı ölçüler 30°C'de çamaşır makinesinde yıkanabilir.",
+      "Kurutma makinesi kullanmadan sererek kurutunuz."
+    ]
+  },
+  {
+    "id": "rug-08",
+    "slug": "hereke-klasik-madalyon-hali",
+    "name": "Hereke Klasik Madalyon",
+    "collection": "Miras Koleksiyonu",
+    "image": "/rugs/rug-08.jpg",
+    "gallery": ["/rugs/rug-08.jpg", "/rugs/rug-02.jpg", "/rugs/rug-10.jpg"],
+    "sizes": ["80 x 300 cm", "160 x 230 cm", "200 x 290 cm", "240 x 340 cm"],
+    "sizeOptions": [
+      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 5690, "stock": 6, "isRunner": true },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 8490, "stock": 8 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 11900, "stock": 5 },
+      { "label": "240 x 340 cm", "widthCm": 240, "lengthCm": 340, "price": 15400, "stock": 2 }
+    ],
+    "priceFrom": 5690,
+    "tags": ["Çok Satan", "Sık İlmek"],
+    "category": "Vintage",
+    "style": "Vintage Eskitme",
+    "rooms": ["Salon & Oturma Odası", "Yemek Odası", "Antre & Koridor"],
+    "material": "Bambu İpeği & Akrilik",
+    "colorFamily": "Lacivert",
+    "colorName": "Kraliyet Lacivert & Yakut",
+    "colorHex": "#1F2A44",
+    "variants": [
+      { "name": "Kraliyet Lacivert & Yakut", "hex": "#1F2A44", "slug": "hereke-klasik-madalyon-hali" },
+      { "name": "Çivit Lacivert & Kiremit", "hex": "#2C4263", "slug": "iznik-eskitme-lacivert-madalyon" }
+    ],
+    "pileHeightMm": 7,
+    "origin": "Yerli Üretim — Gaziantep",
+    "weavingType": "1 milyon nokta yüksek çözünürlüklü dokuma",
+    "bestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewCount": 71,
+    "shortDescription": "Derin lacivert ve yakut tonlarında yüksek ilmek sıklığına sahip zamansız klasik dokuma.",
+    "description": "Hereke dokuma mirasını modern tezgahlarda canlandıran bu model, metrekarede 1 milyon ilmek yoğunluğuyla her ayrıntıyı kristal netliğinde sunar. Bambu ipeği dokusu ışığa göre kadifemsi bir parlaklık verir.",
+    "careInstructions": [
+      "Düzenli elektrikli süpürgeyle fırçasız temizlik önerilir.",
+      "Yılda bir kez profesyonel halı temizleme servisine veriniz."
+    ]
+  },
+  {
+    "id": "rug-09",
+    "slug": "galata-soyut-firca-modern-hali",
+    "name": "Galata Soyut Fırça",
+    "collection": "Atölye Modern",
+    "image": "/rugs/rug-09.jpg",
+    "gallery": ["/rugs/rug-09.jpg", "/rugs/rug-12.jpg", "/rugs/rug-01.jpg"],
+    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 3990, "stock": 10 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 5990, "stock": 12 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 8490, "stock": 6 }
+    ],
+    "priceFrom": 3990,
+    "tags": ["Yeni Sezon", "Leke Tutmaz"],
+    "category": "Modern",
+    "style": "Minimalist",
+    "rooms": ["Salon & Oturma Odası", "Yemek Odası"],
+    "material": "Şönil & Pamuk",
+    "colorFamily": "Siyah & Antrasit",
+    "colorName": "Antrasit Siyah & Ekru",
+    "colorHex": "#2C2E33",
+    "variants": [
+      { "name": "Antrasit Siyah & Ekru", "hex": "#2C2E33", "slug": "galata-soyut-firca-modern-hali" },
+      { "name": "Ekru & Antrasit Çizgi", "hex": "#E6E1D6", "slug": "kuzey-ekru-kare-hali" }
+    ],
+    "pileHeightMm": 9,
+    "origin": "Yerli Üretim — Gaziantep",
+    "weavingType": "Mikro şönil ve pamuk atkı dokuma",
+    "bestseller": false,
+    "isNew": true,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "shortDescription": "Ekru zemin üzerinde cesur antrasit fırça darbeleriyle galeri etkisi yaratan modern halı.",
+    "description": "Galata Soyut Fırça, sade koltuk takımlarını ve ahşap yemek masalarını tek dokunuşla odak noktasına dönüştürür. Havsız şönil yüzeyi tüy ve kıl tutmadığı için evcil hayvanlı evler için de idealdir.",
+    "careInstructions": [
+      "Robot süpürge dostudur; kısa havlı olduğu için takılma yapmaz.",
+      "Nemli bez ve arap sabunu çözeltisiyle lokal temizlik yapılabilir."
+    ]
+  },
+  {
+    "id": "rug-10",
+    "slug": "toprak-zumrut-vintage-hali",
+    "name": "Toprak Zümrüt Vintage",
+    "collection": "Miras Koleksiyonu",
+    "image": "/rugs/rug-10.jpg",
+    "gallery": ["/rugs/rug-10.jpg", "/rugs/rug-02.jpg", "/rugs/rug-08.jpg"],
+    "sizes": ["80 x 150 cm", "80 x 300 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 3450, "stock": 9 },
+      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 5390, "stock": 5, "isRunner": true },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 7790, "stock": 7 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 10690, "stock": 4 }
+    ],
+    "priceFrom": 3450,
+    "tags": ["Özel Seri", "Kaymaz Taban"],
+    "category": "Vintage",
+    "style": "Vintage Eskitme",
+    "rooms": ["Salon & Oturma Odası", "Yatak Odası", "Antre & Koridor"],
+    "material": "Bambu İpeği & Akrilik",
+    "colorFamily": "Yeşil",
+    "colorName": "Orman Zümrüt & Antik Gold",
+    "colorHex": "#265947",
+    "variants": [
+      { "name": "Orman Zümrüt & Antik Gold", "hex": "#265947", "slug": "toprak-zumrut-vintage-hali" },
+      { "name": "Çivit Lacivert & Kiremit", "hex": "#2C4263", "slug": "iznik-eskitme-lacivert-madalyon" }
+    ],
+    "pileHeightMm": 6,
+    "origin": "Yerli Üretim — Uşak",
+    "weavingType": "İpek dokunuşlu vintage wash dokuma",
+    "bestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewCount": 37,
+    "shortDescription": "Derin zümrüt yeşili ve eskitme altın geçişleriyle odalara sakin bir karakter katar.",
+    "description": "Ahşap ve pirinç detaylarla kusursuz uyum yakalayan Toprak Zümrüt Vintage, yıllanmış el dokuması hissini modern bakım kolaylığıyla birleştirir.",
+    "careInstructions": [
+      "30°C'de yıkanabilir pamuklu tabana sahiptir.",
+      "Süpürürken uçları kıvırmadan düz geçiş yapınız."
+    ]
+  },
+  {
+    "id": "rug-11",
+    "slug": "kapadokya-patchwork-kilim",
+    "name": "Kapadokya Mozaik Kilim",
+    "collection": "Zanaat Serisi",
+    "image": "/rugs/rug-11.jpg",
+    "gallery": ["/rugs/rug-11.jpg", "/rugs/rug-05.jpg", "/rugs/rug-04.jpg"],
+    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 3790, "stock": 13 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 5690, "stock": 8 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 7990, "stock": 4 }
+    ],
+    "priceFrom": 3790,
+    "tags": ["Renkli Denge", "Yün Dokuma"],
+    "category": "Modern",
+    "style": "Bohem & Doğal",
+    "rooms": ["Salon & Oturma Odası", "Çocuk Odası", "Yemek Odası"],
+    "material": "Yün & Pamuk",
+    "colorFamily": "Çok Renkli",
+    "colorName": "Terracotta, Hardal & Adaçayı",
+    "colorHex": "#B96444",
+    "variants": [
+      { "name": "Terracotta, Hardal & Adaçayı", "hex": "#B96444", "slug": "kapadokya-patchwork-kilim" },
+      { "name": "Krem, Kiremit & Lacivert", "hex": "#C2603E", "slug": "anadolu-geometrik-kilim" }
+    ],
+    "pileHeightMm": 7,
+    "origin": "Yerli Üretim — Uşak",
+    "weavingType": "Doğal kök boya tonlu yün dokuma",
+    "bestseller": false,
+    "isNew": true,
+    "rating": 4.9,
+    "reviewCount": 26,
+    "shortDescription": "Anadolu'nun sıcak toprak paletini geometrik kare bloklarda buluşturan neşeli yün halı.",
+    "description": "Terracotta, hardal, adaçayı ve gece lacivertinin dengeli kare ritmiyle her koltuk rengine kolayca uyum sağlayan Kapadokya Mozaik Kilim, yaşam alanlarına sanatsal bir enerji taşır.",
+    "careInstructions": [
+      "Kuru köpük veya profesyonel yün halı temizliği önerilir.",
+      "Haftalık toz alımı ömrünü uzatır."
+    ]
+  },
+  {
+    "id": "rug-12",
+    "slug": "kuzey-ekru-kare-hali",
+    "name": "Kuzey Ekru Çizgili Yolluk & Halı",
+    "collection": "Kuzey Konfor",
+    "image": "/rugs/rug-12.jpg",
+    "gallery": ["/rugs/rug-12.jpg", "/rugs/rug-01.jpg", "/rugs/rug-06.jpg"],
+    "sizes": ["80 x 150 cm", "80 x 300 cm", "120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
+    "sizeOptions": [
+      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 2190, "stock": 25, "isRunner": true },
+      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 3690, "stock": 14, "isRunner": true },
+      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 3890, "stock": 12 },
+      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 5790, "stock": 9 },
+      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 8190, "stock": 5 }
+    ],
+    "priceFrom": 2190,
+    "tags": ["Yolluk Seçeneği", "Çok Satan"],
+    "category": "Yolluk",
+    "style": "Minimalist",
+    "rooms": ["Antre & Koridor", "Salon & Oturma Odası", "Yatak Odası"],
+    "material": "Şönil & Pamuk",
+    "colorFamily": "Krem & Bej",
+    "colorName": "Ekru & İnce Antrasit Kare",
+    "colorHex": "#EAE4D7",
+    "variants": [
+      { "name": "Ekru & İnce Antrasit Kare", "hex": "#EAE4D7", "slug": "kuzey-ekru-kare-hali" },
+      { "name": "Antrasit Siyah & Ekru", "hex": "#2C2E33", "slug": "galata-soyut-firca-modern-hali" }
+    ],
+    "pileHeightMm": 10,
+    "origin": "Yerli Üretim — Gaziantep",
+    "weavingType": "Bukle döngü dokuma, kaydırmaz pamuk taban",
+    "bestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewCount": 59,
+    "shortDescription": "Ferahlık katan ekru zemin ve zarif pencere kareleriyle hem antre yolluğu hem salon halısı.",
+    "description": "Koridorlara ve antrelere ferahlık kazandıran Kuzey Ekru Çizgili, 80x150 cm ve 80x300 cm yolluk ölçüleriyle dar alanları geniş gösterir. Kaymaz dokuma tabanı sayesinde koridorlarda güvenle kullanılır.",
+    "careInstructions": [
+      "Yolluk ölçüleri 30°C'de yıkanabilir, çabuk kurur.",
+      "Süpürge ve robot süpürgeyle günlük bakıma tam uyumludur."
+    ]
+  }
+]
