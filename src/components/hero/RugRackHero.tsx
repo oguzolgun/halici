@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import {
   AnimatePresence,
@@ -14,18 +13,13 @@ import {
   type MotionValue,
   type PanInfo,
 } from "framer-motion";
-import { ArrowLeft, ArrowRight, Eye } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { formatTRY } from "@/lib/format";
 import { useIsFinePointer } from "@/lib/hooks";
 import type { RugProduct } from "@/types/rug";
 import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
 import { PriceTag } from "../ui/PriceTag";
-
-const QuickViewModal = dynamic(
-  () => import("./QuickViewModal").then((mod) => mod.QuickViewModal),
-  { ssr: false }
-);
 
 interface RugRackHeroProps {
   rugs: RugProduct[];
@@ -214,7 +208,6 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
   const initialIndex = Math.min(2, rugs.length - 1);
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const [isDragging, setIsDragging] = useState(false);
-  const [quickViewRug, setQuickViewRug] = useState<RugProduct | null>(null);
   const [cursorVisible, setCursorVisible] = useState(false);
   const [hasMovedPointer, setHasMovedPointer] = useState(false);
   const isFinePointer = useIsFinePointer();
@@ -393,7 +386,7 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
   return (
     <section
       aria-label="Seç Halı vitrini"
-      className="relative overflow-hidden border-b border-line bg-ivory"
+      className="relative overflow-hidden border-b border-line bg-ivory pt-5 sm:pt-7 lg:pt-8"
     >
       {/* Showroom background wall with subtle ivory wash for contrast */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
@@ -409,27 +402,6 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/82 to-ivory/95" />
       </div>
-
-      {/* Headline & Subline above the hanging rack */}
-      <Container className="relative z-10 pt-5 pb-3 sm:pt-7 sm:pb-4">
-        <div className="flex flex-col items-start justify-between gap-2 md:flex-row md:items-end">
-          <div className="max-w-2xl">
-            <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-terracotta-deep">
-              Seç Halı Showroom Koleksiyonu
-            </p>
-            <h1 className="font-editorial text-3xl leading-[1.08] text-ink sm:text-4xl lg:text-[46px]">
-              Evinize yakışan halıyı seçin.
-            </h1>
-            <p className="mt-1.5 text-sm text-stone sm:text-base">
-              Binlerce halı, güvenle seçin.
-            </p>
-          </div>
-
-          <p className="hidden text-xs font-medium text-stone md:block">
-            Sürükleyin, kaydırın veya ok tuşlarıyla rafı gezinin
-          </p>
-        </div>
-      </Container>
 
       {/* Interactive Hanging Rack Carousel Stage */}
       <div
@@ -532,16 +504,16 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
         )}
       </div>
 
-      {/* Controls Bar + Active Rug Info Card */}
-      <Container className="relative z-20 pb-7 pt-1 sm:pb-9">
+      {/* 2-Column: Left CTA Headline + Right Dynamic Active Rug Info Card */}
+      <Container className="relative z-20 pb-8 pt-3 sm:pb-12">
         {/* Rack Controls: Prev / Counter / Progress Bar / Next */}
-        <div className="mx-auto mb-4 flex max-w-xl items-center justify-between gap-4">
+        <div className="mx-auto mb-6 flex max-w-md items-center justify-between gap-4">
           <button
             type="button"
             onClick={() => snapToIndex(activeIndex - 1)}
             disabled={activeIndex === 0}
             aria-label="Önceki halı"
-            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-line bg-ivory-soft text-navy transition-colors hover:border-navy hover:bg-sand/60 disabled:opacity-35 disabled:pointer-events-none cursor-pointer"
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-line bg-ivory-soft text-navy transition-colors hover:border-navy hover:bg-sand/60 disabled:pointer-events-none disabled:opacity-35 cursor-pointer"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
           </button>
@@ -576,50 +548,71 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
             onClick={() => snapToIndex(activeIndex + 1)}
             disabled={activeIndex === rugs.length - 1}
             aria-label="Sonraki halı"
-            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-line bg-ivory-soft text-navy transition-colors hover:border-navy hover:bg-sand/60 disabled:opacity-35 disabled:pointer-events-none cursor-pointer"
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-line bg-ivory-soft text-navy transition-colors hover:border-navy hover:bg-sand/60 disabled:pointer-events-none disabled:opacity-35 cursor-pointer"
           >
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
 
-        {/* Crossfading Active Rug Info Card */}
-        <div className="mx-auto max-w-3xl rounded-[14px] border border-line bg-ivory-soft/95 p-4 shadow-[var(--shadow-soft)] backdrop-blur-sm sm:px-6 sm:py-5">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeRug.id}
-              initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -6 }}
-              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center"
-            >
-              <div className="space-y-1.5">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
-                    {activeRug.collection}
-                  </span>
-                  <span aria-hidden="true" className="text-stone/40">
-                    •
-                  </span>
-                  <span className="text-xs text-stone">
-                    {activeRug.material}
-                  </span>
+        {/* 2-Column Section */}
+        <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-12 lg:gap-8">
+          {/* Left Column: CTA Headline Block */}
+          <div className="space-y-3 lg:col-span-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-terracotta-deep">
+              Seç Halı Showroom Koleksiyonu
+            </p>
+            <h1 className="font-editorial text-2xl leading-[1.15] text-ink sm:text-3xl lg:text-4xl">
+              Evinize yakışan halıyı seçin.
+            </h1>
+            <p className="text-sm leading-relaxed text-stone">
+              Binlerce halı, güvenle seçin. Rafı sürükleyerek veya ok tuşlarıyla koleksiyonu keşfedin.
+            </p>
+            <div className="pt-1.5">
+              <Button href="/halilar" variant="secondary" size="md">
+                Tüm Koleksiyonu Gör
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Column: Dynamic Active Rug Info Card */}
+          <div className="rounded-[14px] border border-line bg-ivory-soft/95 p-5 shadow-[var(--shadow-soft)] backdrop-blur-sm sm:p-6 lg:col-span-7">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeRug.id}
+                initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -6 }}
+                transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center"
+              >
+                <div className="min-w-0 flex-1 space-y-1.5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
+                      {activeRug.collection}
+                    </span>
+                    <span aria-hidden="true" className="text-stone/40">
+                      •
+                    </span>
+                    <span className="text-xs text-stone">
+                      {activeRug.material}
+                    </span>
+                  </div>
+
+                  <h2 className="truncate font-editorial text-xl text-ink sm:text-2xl">
+                    {activeRug.name}
+                  </h2>
+
+                  <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-0.5 text-xs text-stone">
+                    <span className="font-medium text-ink">Ölçüler:</span>
+                    <span className="text-[11px] sm:text-xs">
+                      {activeRug.sizes.join(" · ")}
+                    </span>
+                  </div>
                 </div>
 
-                <h2 className="font-editorial text-2xl text-ink sm:text-[28px]">
-                  {activeRug.name}
-                </h2>
+                <div className="flex shrink-0 flex-col items-start gap-2.5 border-t border-line pt-3 sm:items-end sm:border-t-0 sm:pt-0">
+                  <PriceTag amount={activeRug.priceFrom} fromPrefix size="lg" />
 
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-0.5 text-xs text-stone">
-                  <span className="font-medium text-ink">Ölçüler:</span>
-                  <span>{activeRug.sizes.join("  ·  ")}</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-start gap-3 border-t border-line pt-4 sm:items-end sm:border-t-0 sm:pt-0">
-                <PriceTag amount={activeRug.priceFrom} fromPrefix size="lg" />
-
-                <div className="flex flex-wrap items-center gap-2.5">
                   <Button
                     href={`/halilar/${activeRug.slug}`}
                     variant="primary"
@@ -627,28 +620,12 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
                   >
                     Halıyı İncele
                   </Button>
-
-                  <Button
-                    variant="ghost"
-                    size="md"
-                    onClick={() => setQuickViewRug(activeRug)}
-                  >
-                    <Eye className="h-4 w-4" aria-hidden="true" />
-                    Hızlı Bak
-                  </Button>
                 </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </Container>
-
-      {quickViewRug && (
-        <QuickViewModal
-          rug={quickViewRug}
-          onClose={() => setQuickViewRug(null)}
-        />
-      )}
     </section>
   );
 }
