@@ -69,6 +69,7 @@ export default function DesignSystemPage() {
                   alt="seç halı ana logo"
                   width={220}
                   height={68}
+                  unoptimized
                 />
               </div>
               <p className="text-xs text-stone">
@@ -86,6 +87,7 @@ export default function DesignSystemPage() {
                   alt="seç halı fildişi logo"
                   width={220}
                   height={68}
+                  unoptimized
                 />
               </div>
               <p className="text-xs text-ivory/75">

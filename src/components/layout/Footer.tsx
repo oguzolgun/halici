@@ -16,6 +16,7 @@ export function Footer() {
                 alt="seç halı"
                 width={148}
                 height={46}
+                unoptimized
                 className="h-9 w-auto"
               />
             </Link>
