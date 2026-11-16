@@ -63,7 +63,7 @@ export function BestSellersCarousel({ rugs }: BestSellersCarouselProps) {
           {rugs.map((rug) => (
             <div
               key={rug.id}
-              className="w-[78%] shrink-0 snap-start sm:w-[46%] lg:w-[23.6%]"
+              className="w-[48%] shrink-0 snap-start sm:w-[46%] lg:w-[23.6%]"
             >
               <ProductCard rug={rug} />
             </div>

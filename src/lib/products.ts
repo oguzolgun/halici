@@ -26,7 +26,7 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     date: "18 Ekim 2026",
     rugSlug: "mira-kabartma-modern-hali",
     rugName: "Mira Mimari Kabartma",
-    sizePurchased: "200 x 290 cm",
+    sizePurchased: "200x290 cm",
     comment:
       "Fotoğraftaki dokusu gerçekte daha da zarif. Salonumuz sabah güneşi aldığında kabartma desenleri çok sakin ve kaliteli görünüyor. Teslimat ertesi gün sorunsuz ulaştı.",
     verified: true,
@@ -39,7 +39,7 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     date: "2 Kasım 2026",
     rugSlug: "iznik-eskitme-lacivert-madalyon",
     rugName: "İznik Eskitme Madalyon",
-    sizePurchased: "160 x 230 cm",
+    sizePurchased: "160x230 cm",
     comment:
       "Yemek masası altı için ince havlı bir model arıyorduk. Sandalyeler rahatça kayıyor, lacivert ve kiremit tonu meşe masayla harika bütünleşti.",
     verified: true,
@@ -52,7 +52,7 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     date: "27 Ekim 2026",
     rugSlug: "bulut-masali-cocuk-odasi-halisi",
     rugName: "Bulut Masalı Çocuk Halısı",
-    sizePurchased: "120 x 180 cm",
+    sizePurchased: "120x180 cm",
     comment:
       "Kızımın odası için aldık. Kesinlikle koku yapmıyor ve tüy dökmüyor. 30 derecede yıkayıp serdik, formu hiç bozulmadı.",
     verified: true,
@@ -65,7 +65,7 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     date: "5 Kasım 2026",
     rugSlug: "anadolu-geometrik-kilim",
     rugName: "Anadolu Geometrik Kilim",
-    sizePurchased: "160 x 230 cm",
+    sizePurchased: "160x230 cm",
     comment:
       "Ölçü konusunda tereddüt etmiştik, sitedeki ölçü rehberi çok yardımcı oldu. Kırık beyaz zemini evi olduğundan daha ferah gösteriyor.",
     verified: true,
@@ -263,7 +263,17 @@ export function getFilteredRugs(params: RugFilterParams): RugProduct[] {
   }
 
   if (params.size) {
-    results = results.filter((r) => r.sizes.includes(params.size!));
+    const norm = params.size.replace(/\s+/g, "").replace("cm", "").toLowerCase();
+    results = results.filter(
+      (r) =>
+        r.sizes.some(
+          (s) => s.replace(/\s+/g, "").replace("cm", "").toLowerCase() === norm
+        ) ||
+        r.sizeOptions.some(
+          (s) =>
+            s.label.replace(/\s+/g, "").replace("cm", "").toLowerCase() === norm
+        )
+    );
   }
 
   if (params.color) {
@@ -275,8 +285,9 @@ export function getFilteredRugs(params: RugFilterParams): RugProduct[] {
   }
 
   if (params.room) {
+    const roomParam = params.room.toLowerCase();
     results = results.filter((r) =>
-      r.rooms.includes(params.room as RugProduct["rooms"][number])
+      r.rooms.some((rm) => rm.toLowerCase() === roomParam)
     );
   }
 

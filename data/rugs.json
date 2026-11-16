@@ -5,27 +5,105 @@
     "name": "Mira Mimari Kabartma",
     "collection": "Atölye Modern",
     "image": "/rugs/rug-01.jpg",
-    "gallery": ["/rugs/rug-01.jpg", "/rugs/rug-12.jpg", "/rugs/rug-03.jpg"],
-    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm", "240 x 340 cm"],
-    "sizeOptions": [
-      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 4650, "stock": 14 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 6890, "stock": 9 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 9450, "stock": 6 },
-      { "label": "240 x 340 cm", "widthCm": 240, "lengthCm": 340, "price": 12900, "stock": 3 }
+    "gallery": [
+      "/rugs/rug-01.jpg",
+      "/rugs/rug-12.jpg",
+      "/rugs/rug-03.jpg"
     ],
-    "priceFrom": 4650,
-    "tags": ["Çok Satan", "Kabartma Doku"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 2450,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 4450,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 3700,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 5500,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 3950,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 6850,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 9900,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 2450,
+    "tags": [
+      "Çok Satan",
+      "Kabartma Doku"
+    ],
     "category": "Modern",
     "style": "Minimalist",
-    "rooms": ["Salon & Oturma Odası", "Yatak Odası"],
+    "rooms": [
+      "Salon halısı",
+      "Oturma odası halısı",
+      "Yatak odası halısı"
+    ],
     "material": "Yün & Pamuk",
     "colorFamily": "Krem & Bej",
     "colorName": "Sıcak Kırık Beyaz & Vizon",
     "colorHex": "#DDD3C4",
     "variants": [
-      { "name": "Sıcak Kırık Beyaz & Vizon", "hex": "#DDD3C4", "slug": "mira-kabartma-modern-hali" },
-      { "name": "Ekru & Antrasit Çizgi", "hex": "#EBE6DC", "slug": "kuzey-ekru-kare-hali" },
-      { "name": "Duman Grisi", "hex": "#C5C6C7", "slug": "atlas-baklava-dokuma-hali" }
+      {
+        "name": "Sıcak Kırık Beyaz & Vizon",
+        "hex": "#DDD3C4",
+        "slug": "mira-kabartma-modern-hali"
+      },
+      {
+        "name": "Ekru & Antrasit Çizgi",
+        "hex": "#EBE6DC",
+        "slug": "kuzey-ekru-kare-hali"
+      },
+      {
+        "name": "Duman Grisi",
+        "hex": "#C5C6C7",
+        "slug": "atlas-baklava-dokuma-hali"
+      }
     ],
     "pileHeightMm": 11,
     "origin": "Yerli Üretim — Gaziantep",
@@ -48,27 +126,106 @@
     "name": "İznik Eskitme Madalyon",
     "collection": "Miras Koleksiyonu",
     "image": "/rugs/rug-02.jpg",
-    "gallery": ["/rugs/rug-02.jpg", "/rugs/rug-08.jpg", "/rugs/rug-10.jpg"],
-    "sizes": ["80 x 150 cm", "80 x 300 cm", "160 x 230 cm", "200 x 290 cm"],
-    "sizeOptions": [
-      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 3290, "stock": 12 },
-      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 5150, "stock": 7, "isRunner": true },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 7490, "stock": 8 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 10350, "stock": 4 }
+    "gallery": [
+      "/rugs/rug-02.jpg",
+      "/rugs/rug-08.jpg",
+      "/rugs/rug-10.jpg"
     ],
-    "priceFrom": 3290,
-    "tags": ["Çok Satan", "Yıkanabilir Taban"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 2650,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 4800,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 4000,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 5950,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 4300,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 7400,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 10750,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 2650,
+    "tags": [
+      "Çok Satan",
+      "Yıkanabilir Taban"
+    ],
     "category": "Vintage",
     "style": "Vintage Eskitme",
-    "rooms": ["Salon & Oturma Odası", "Yemek Odası", "Antre & Koridor"],
+    "rooms": [
+      "Salon halısı",
+      "Oturma odası halısı",
+      "Mutfak halısı",
+      "Koridor halısı"
+    ],
     "material": "Bambu İpeği & Akrilik",
     "colorFamily": "Lacivert",
     "colorName": "Çivit Lacivert & Kiremit",
     "colorHex": "#2C4263",
     "variants": [
-      { "name": "Çivit Lacivert & Kiremit", "hex": "#2C4263", "slug": "iznik-eskitme-lacivert-madalyon" },
-      { "name": "Zümrüt & Eskitme Altın", "hex": "#2B5B4B", "slug": "toprak-zumrut-vintage-hali" },
-      { "name": "Kraliyet Lacivert & Yakut", "hex": "#1F2A44", "slug": "hereke-klasik-madalyon-hali" }
+      {
+        "name": "Çivit Lacivert & Kiremit",
+        "hex": "#2C4263",
+        "slug": "iznik-eskitme-lacivert-madalyon"
+      },
+      {
+        "name": "Zümrüt & Eskitme Altın",
+        "hex": "#2B5B4B",
+        "slug": "toprak-zumrut-vintage-hali"
+      },
+      {
+        "name": "Kraliyet Lacivert & Yakut",
+        "hex": "#1F2A44",
+        "slug": "hereke-klasik-madalyon-hali"
+      }
     ],
     "pileHeightMm": 6,
     "origin": "Yerli Üretim — Uşak",
@@ -91,25 +248,101 @@
     "name": "Atlas Baklava Dokuma",
     "collection": "Kuzey Konfor",
     "image": "/rugs/rug-03.jpg",
-    "gallery": ["/rugs/rug-03.jpg", "/rugs/rug-01.jpg", "/rugs/rug-06.jpg"],
-    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
-    "sizeOptions": [
-      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 4190, "stock": 18 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 6290, "stock": 11 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 8690, "stock": 5 }
+    "gallery": [
+      "/rugs/rug-03.jpg",
+      "/rugs/rug-01.jpg",
+      "/rugs/rug-06.jpg"
     ],
-    "priceFrom": 4190,
-    "tags": ["Yumuşak Hav", "Aile Dostu"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 2250,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 4100,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 3400,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 5050,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 3650,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 6300,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 9100,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 2250,
+    "tags": [
+      "Yumuşak Hav",
+      "Aile Dostu"
+    ],
     "category": "Modern",
     "style": "Minimalist",
-    "rooms": ["Salon & Oturma Odası", "Yatak Odası"],
+    "rooms": [
+      "Salon halısı",
+      "Oturma odası halısı",
+      "Yatak odası halısı",
+      "Balkon halısı"
+    ],
     "material": "Yün & Pamuk",
     "colorFamily": "Gri",
     "colorName": "Güvercin Grisi & Krem",
     "colorHex": "#B9BCC0",
     "variants": [
-      { "name": "Güvercin Grisi & Krem", "hex": "#B9BCC0", "slug": "atlas-baklava-dokuma-hali" },
-      { "name": "Krem & Lacivert Biyeli", "hex": "#EFE9DC", "slug": "bodrum-krem-biyeli-yun-hali" }
+      {
+        "name": "Güvercin Grisi & Krem",
+        "hex": "#B9BCC0",
+        "slug": "atlas-baklava-dokuma-hali"
+      },
+      {
+        "name": "Krem & Lacivert Biyeli",
+        "hex": "#EFE9DC",
+        "slug": "bodrum-krem-biyeli-yun-hali"
+      }
     ],
     "pileHeightMm": 14,
     "origin": "Yerli Üretim — Gaziantep",
@@ -131,27 +364,101 @@
     "name": "Ege Örgü Doğal Jüt",
     "collection": "Topraktan",
     "image": "/rugs/rug-04.jpg",
-    "gallery": ["/rugs/rug-04.jpg", "/rugs/rug-05.jpg", "/rugs/rug-01.jpg"],
-    "sizes": ["80 x 150 cm", "80 x 300 cm", "140 x 200 cm", "160 x 230 cm", "200 x 290 cm"],
-    "sizeOptions": [
-      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 2490, "stock": 22 },
-      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 3890, "stock": 10, "isRunner": true },
-      { "label": "140 x 200 cm", "widthCm": 140, "lengthCm": 200, "price": 4390, "stock": 15 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 5490, "stock": 9 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 7690, "stock": 6 }
+    "gallery": [
+      "/rugs/rug-04.jpg",
+      "/rugs/rug-05.jpg",
+      "/rugs/rug-01.jpg"
     ],
-    "priceFrom": 2490,
-    "tags": ["%100 Doğal Lif", "El Örgüsü"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 1950,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 3550,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 2900,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 4400,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 3150,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 5450,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 7900,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 1950,
+    "tags": [
+      "%100 Doğal Lif",
+      "El Örgüsü"
+    ],
     "category": "Doğal",
     "style": "Bohem & Doğal",
-    "rooms": ["Yemek Odası", "Salon & Oturma Odası", "Antre & Koridor"],
+    "rooms": [
+      "Mutfak halısı",
+      "Balkon halısı",
+      "Koridor halısı",
+      "Salon halısı"
+    ],
     "material": "Doğal Jüt & Sisal",
     "colorFamily": "Toprak & Terracotta",
     "colorName": "Altın Hasır",
     "colorHex": "#C8A472",
     "variants": [
-      { "name": "Altın Hasır", "hex": "#C8A472", "slug": "ege-orgu-dogal-jut-hali" },
-      { "name": "Krem & Lacivert Biyeli", "hex": "#F1ECE1", "slug": "bodrum-krem-biyeli-yun-hali" }
+      {
+        "name": "Altın Hasır",
+        "hex": "#C8A472",
+        "slug": "ege-orgu-dogal-jut-hali"
+      },
+      {
+        "name": "Krem & Lacivert Biyeli",
+        "hex": "#F1ECE1",
+        "slug": "bodrum-krem-biyeli-yun-hali"
+      }
     ],
     "pileHeightMm": 8,
     "origin": "Yerli İşçilik — Denizli",
@@ -173,26 +480,101 @@
     "name": "Anadolu Geometrik Kilim",
     "collection": "Zanaat Serisi",
     "image": "/rugs/rug-05.jpg",
-    "gallery": ["/rugs/rug-05.jpg", "/rugs/rug-11.jpg", "/rugs/rug-02.jpg"],
-    "sizes": ["80 x 150 cm", "120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
-    "sizeOptions": [
-      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 2950, "stock": 11 },
-      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 4450, "stock": 14 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 6790, "stock": 7 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 9250, "stock": 3 }
+    "gallery": [
+      "/rugs/rug-05.jpg",
+      "/rugs/rug-11.jpg",
+      "/rugs/rug-02.jpg"
     ],
-    "priceFrom": 2950,
-    "tags": ["Yeni Sezon", "El Tezgahı İlhamlı"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 1850,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 3350,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 2800,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 4150,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 3000,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 5200,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 7500,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 1850,
+    "tags": [
+      "Yeni Sezon",
+      "El Tezgahı İlhamlı"
+    ],
     "category": "Doğal",
     "style": "Anadolu & Kilim",
-    "rooms": ["Salon & Oturma Odası", "Yemek Odası", "Antre & Koridor"],
+    "rooms": [
+      "Salon halısı",
+      "Oturma odası halısı",
+      "Koridor halısı",
+      "Mutfak halısı"
+    ],
     "material": "Yün & Pamuk",
     "colorFamily": "Toprak & Terracotta",
     "colorName": "Krem, Kiremit & Gece Laciverti",
     "colorHex": "#B65336",
     "variants": [
-      { "name": "Krem, Kiremit & Gece Laciverti", "hex": "#B65336", "slug": "anadolu-geometrik-kilim" },
-      { "name": "Toprak Mozaik", "hex": "#C2603E", "slug": "kapadokya-patchwork-kilim" }
+      {
+        "name": "Krem, Kiremit & Gece Laciverti",
+        "hex": "#B65336",
+        "slug": "anadolu-geometrik-kilim"
+      },
+      {
+        "name": "Toprak Mozaik",
+        "hex": "#C2603E",
+        "slug": "kapadokya-patchwork-kilim"
+      }
     ],
     "pileHeightMm": 5,
     "origin": "Yerli Üretim — Uşak",
@@ -214,25 +596,100 @@
     "name": "Bodrum Krem Biyeli Yün",
     "collection": "Kuzey Konfor",
     "image": "/rugs/rug-06.jpg",
-    "gallery": ["/rugs/rug-06.jpg", "/rugs/rug-03.jpg", "/rugs/rug-12.jpg"],
-    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
-    "sizeOptions": [
-      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 4890, "stock": 9 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 7190, "stock": 6 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 9890, "stock": 4 }
+    "gallery": [
+      "/rugs/rug-06.jpg",
+      "/rugs/rug-03.jpg",
+      "/rugs/rug-12.jpg"
     ],
-    "priceFrom": 4890,
-    "tags": ["Yumuşak Hav", "Doğal Yün"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 2850,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 5200,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 4300,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 6400,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 4600,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 8000,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 11550,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 2850,
+    "tags": [
+      "Yumuşak Hav",
+      "Doğal Yün"
+    ],
     "category": "Doğal",
     "style": "Minimalist",
-    "rooms": ["Yatak Odası", "Salon & Oturma Odası"],
+    "rooms": [
+      "Yatak odası halısı",
+      "Oturma odası halısı",
+      "Banyo paspası"
+    ],
     "material": "Yün & Pamuk",
     "colorFamily": "Krem & Bej",
     "colorName": "Krem & Lacivert Çerçeve",
     "colorHex": "#EFE9DC",
     "variants": [
-      { "name": "Krem & Lacivert Çerçeve", "hex": "#EFE9DC", "slug": "bodrum-krem-biyeli-yun-hali" },
-      { "name": "Ekru & Antrasit Çizgi", "hex": "#E6E1D6", "slug": "kuzey-ekru-kare-hali" }
+      {
+        "name": "Krem & Lacivert Çerçeve",
+        "hex": "#EFE9DC",
+        "slug": "bodrum-krem-biyeli-yun-hali"
+      },
+      {
+        "name": "Ekru & Antrasit Çizgi",
+        "hex": "#E6E1D6",
+        "slug": "kuzey-ekru-kare-hali"
+      }
     ],
     "pileHeightMm": 18,
     "origin": "Yerli Üretim — Gaziantep",
@@ -254,25 +711,98 @@
     "name": "Bulut Masalı Çocuk Halısı",
     "collection": "Minik Adımlar",
     "image": "/rugs/rug-07.jpg",
-    "gallery": ["/rugs/rug-07.jpg", "/rugs/rug-06.jpg"],
-    "sizes": ["100 x 150 cm", "120 x 180 cm", "160 x 230 cm"],
-    "sizeOptions": [
-      { "label": "100 x 150 cm", "widthCm": 100, "lengthCm": 150, "price": 2390, "stock": 19 },
-      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 3290, "stock": 14 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 4690, "stock": 8 }
+    "gallery": [
+      "/rugs/rug-07.jpg",
+      "/rugs/rug-06.jpg"
     ],
-    "priceFrom": 2390,
-    "tags": ["OEKO-TEX Sertifikalı", "Yıkanabilir"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 1750,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 3200,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 2600,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 3950,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 2850,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 4900,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 7100,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 1750,
+    "tags": [
+      "OEKO-TEX Sertifikalı",
+      "Yıkanabilir"
+    ],
     "category": "Çocuk",
     "style": "Çocuk & Oyun",
-    "rooms": ["Çocuk Odası"],
+    "rooms": [
+      "Çocuk odası halısı",
+      "Oturma odası halısı"
+    ],
     "material": "Organik Pamuk",
     "colorFamily": "Pastel",
     "colorName": "Pudra Pembe & Mint Bulut",
     "colorHex": "#E8C5C7",
     "variants": [
-      { "name": "Pudra Pembe & Mint Bulut", "hex": "#E8C5C7", "slug": "bulut-masali-cocuk-odasi-halisi" },
-      { "name": "Sıcak Kırık Beyaz", "hex": "#EAE3D5", "slug": "mira-kabartma-modern-hali" }
+      {
+        "name": "Pudra Pembe & Mint Bulut",
+        "hex": "#E8C5C7",
+        "slug": "bulut-masali-cocuk-odasi-halisi"
+      },
+      {
+        "name": "Sıcak Kırık Beyaz",
+        "hex": "#EAE3D5",
+        "slug": "mira-kabartma-modern-hali"
+      }
     ],
     "pileHeightMm": 10,
     "origin": "Yerli Üretim — Denizli",
@@ -294,26 +824,100 @@
     "name": "Hereke Klasik Madalyon",
     "collection": "Miras Koleksiyonu",
     "image": "/rugs/rug-08.jpg",
-    "gallery": ["/rugs/rug-08.jpg", "/rugs/rug-02.jpg", "/rugs/rug-10.jpg"],
-    "sizes": ["80 x 300 cm", "160 x 230 cm", "200 x 290 cm", "240 x 340 cm"],
-    "sizeOptions": [
-      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 5690, "stock": 6, "isRunner": true },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 8490, "stock": 8 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 11900, "stock": 5 },
-      { "label": "240 x 340 cm", "widthCm": 240, "lengthCm": 340, "price": 15400, "stock": 2 }
+    "gallery": [
+      "/rugs/rug-08.jpg",
+      "/rugs/rug-02.jpg",
+      "/rugs/rug-10.jpg"
     ],
-    "priceFrom": 5690,
-    "tags": ["Çok Satan", "Sık İlmek"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 3250,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 5900,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 4900,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 7300,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 5250,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 9100,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 13150,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 3250,
+    "tags": [
+      "Çok Satan",
+      "Sık İlmek"
+    ],
     "category": "Vintage",
     "style": "Vintage Eskitme",
-    "rooms": ["Salon & Oturma Odası", "Yemek Odası", "Antre & Koridor"],
+    "rooms": [
+      "Salon halısı",
+      "Oturma odası halısı",
+      "Yatak odası halısı"
+    ],
     "material": "Bambu İpeği & Akrilik",
     "colorFamily": "Lacivert",
     "colorName": "Kraliyet Lacivert & Yakut",
     "colorHex": "#1F2A44",
     "variants": [
-      { "name": "Kraliyet Lacivert & Yakut", "hex": "#1F2A44", "slug": "hereke-klasik-madalyon-hali" },
-      { "name": "Çivit Lacivert & Kiremit", "hex": "#2C4263", "slug": "iznik-eskitme-lacivert-madalyon" }
+      {
+        "name": "Kraliyet Lacivert & Yakut",
+        "hex": "#1F2A44",
+        "slug": "hereke-klasik-madalyon-hali"
+      },
+      {
+        "name": "Çivit Lacivert & Kiremit",
+        "hex": "#2C4263",
+        "slug": "iznik-eskitme-lacivert-madalyon"
+      }
     ],
     "pileHeightMm": 7,
     "origin": "Yerli Üretim — Gaziantep",
@@ -335,25 +939,100 @@
     "name": "Galata Soyut Fırça",
     "collection": "Atölye Modern",
     "image": "/rugs/rug-09.jpg",
-    "gallery": ["/rugs/rug-09.jpg", "/rugs/rug-12.jpg", "/rugs/rug-01.jpg"],
-    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
-    "sizeOptions": [
-      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 3990, "stock": 10 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 5990, "stock": 12 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 8490, "stock": 6 }
+    "gallery": [
+      "/rugs/rug-09.jpg",
+      "/rugs/rug-12.jpg",
+      "/rugs/rug-01.jpg"
     ],
-    "priceFrom": 3990,
-    "tags": ["Yeni Sezon", "Leke Tutmaz"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 2350,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 4300,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 3500,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 5300,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 3800,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 6600,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 9500,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 2350,
+    "tags": [
+      "Yeni Sezon",
+      "Leke Tutmaz"
+    ],
     "category": "Modern",
     "style": "Minimalist",
-    "rooms": ["Salon & Oturma Odası", "Yemek Odası"],
+    "rooms": [
+      "Salon halısı",
+      "Oturma odası halısı",
+      "Koridor halısı"
+    ],
     "material": "Şönil & Pamuk",
     "colorFamily": "Siyah & Antrasit",
     "colorName": "Antrasit Siyah & Ekru",
     "colorHex": "#2C2E33",
     "variants": [
-      { "name": "Antrasit Siyah & Ekru", "hex": "#2C2E33", "slug": "galata-soyut-firca-modern-hali" },
-      { "name": "Ekru & Antrasit Çizgi", "hex": "#E6E1D6", "slug": "kuzey-ekru-kare-hali" }
+      {
+        "name": "Antrasit Siyah & Ekru",
+        "hex": "#2C2E33",
+        "slug": "galata-soyut-firca-modern-hali"
+      },
+      {
+        "name": "Ekru & Antrasit Çizgi",
+        "hex": "#E6E1D6",
+        "slug": "kuzey-ekru-kare-hali"
+      }
     ],
     "pileHeightMm": 9,
     "origin": "Yerli Üretim — Gaziantep",
@@ -375,26 +1054,100 @@
     "name": "Toprak Zümrüt Vintage",
     "collection": "Miras Koleksiyonu",
     "image": "/rugs/rug-10.jpg",
-    "gallery": ["/rugs/rug-10.jpg", "/rugs/rug-02.jpg", "/rugs/rug-08.jpg"],
-    "sizes": ["80 x 150 cm", "80 x 300 cm", "160 x 230 cm", "200 x 290 cm"],
+    "gallery": [
+      "/rugs/rug-10.jpg",
+      "/rugs/rug-02.jpg",
+      "/rugs/rug-08.jpg"
+    ],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
     "sizeOptions": [
-      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 3450, "stock": 9 },
-      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 5390, "stock": 5, "isRunner": true },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 7790, "stock": 7 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 10690, "stock": 4 }
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 3450,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 6300,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 5200,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 7750,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 5600,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 9650,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 13950,
+        "stock": 6
+      }
     ],
     "priceFrom": 3450,
-    "tags": ["Özel Seri", "Kaymaz Taban"],
+    "tags": [
+      "Özel Seri",
+      "Kaymaz Taban"
+    ],
     "category": "Vintage",
     "style": "Vintage Eskitme",
-    "rooms": ["Salon & Oturma Odası", "Yatak Odası", "Antre & Koridor"],
+    "rooms": [
+      "Salon halısı",
+      "Oturma odası halısı",
+      "Yatak odası halısı"
+    ],
     "material": "Bambu İpeği & Akrilik",
     "colorFamily": "Yeşil",
     "colorName": "Orman Zümrüt & Antik Gold",
     "colorHex": "#265947",
     "variants": [
-      { "name": "Orman Zümrüt & Antik Gold", "hex": "#265947", "slug": "toprak-zumrut-vintage-hali" },
-      { "name": "Çivit Lacivert & Kiremit", "hex": "#2C4263", "slug": "iznik-eskitme-lacivert-madalyon" }
+      {
+        "name": "Orman Zümrüt & Antik Gold",
+        "hex": "#265947",
+        "slug": "toprak-zumrut-vintage-hali"
+      },
+      {
+        "name": "Çivit Lacivert & Kiremit",
+        "hex": "#2C4263",
+        "slug": "iznik-eskitme-lacivert-madalyon"
+      }
     ],
     "pileHeightMm": 6,
     "origin": "Yerli Üretim — Uşak",
@@ -416,25 +1169,101 @@
     "name": "Kapadokya Mozaik Kilim",
     "collection": "Zanaat Serisi",
     "image": "/rugs/rug-11.jpg",
-    "gallery": ["/rugs/rug-11.jpg", "/rugs/rug-05.jpg", "/rugs/rug-04.jpg"],
-    "sizes": ["120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
-    "sizeOptions": [
-      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 3790, "stock": 13 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 5690, "stock": 8 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 7990, "stock": 4 }
+    "gallery": [
+      "/rugs/rug-11.jpg",
+      "/rugs/rug-05.jpg",
+      "/rugs/rug-04.jpg"
     ],
-    "priceFrom": 3790,
-    "tags": ["Renkli Denge", "Yün Dokuma"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 2150,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 3900,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 3200,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 4850,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 3500,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 6000,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 8700,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 2150,
+    "tags": [
+      "Renkli Denge",
+      "Yün Dokuma"
+    ],
     "category": "Modern",
     "style": "Bohem & Doğal",
-    "rooms": ["Salon & Oturma Odası", "Çocuk Odası", "Yemek Odası"],
+    "rooms": [
+      "Salon halısı",
+      "Oturma odası halısı",
+      "Çocuk odası halısı",
+      "Mutfak halısı"
+    ],
     "material": "Yün & Pamuk",
     "colorFamily": "Çok Renkli",
     "colorName": "Terracotta, Hardal & Adaçayı",
     "colorHex": "#B96444",
     "variants": [
-      { "name": "Terracotta, Hardal & Adaçayı", "hex": "#B96444", "slug": "kapadokya-patchwork-kilim" },
-      { "name": "Krem, Kiremit & Lacivert", "hex": "#C2603E", "slug": "anadolu-geometrik-kilim" }
+      {
+        "name": "Terracotta, Hardal & Adaçayı",
+        "hex": "#B96444",
+        "slug": "kapadokya-patchwork-kilim"
+      },
+      {
+        "name": "Krem, Kiremit & Lacivert",
+        "hex": "#C2603E",
+        "slug": "anadolu-geometrik-kilim"
+      }
     ],
     "pileHeightMm": 7,
     "origin": "Yerli Üretim — Uşak",
@@ -456,27 +1285,102 @@
     "name": "Kuzey Ekru Çizgili Yolluk & Halı",
     "collection": "Kuzey Konfor",
     "image": "/rugs/rug-12.jpg",
-    "gallery": ["/rugs/rug-12.jpg", "/rugs/rug-01.jpg", "/rugs/rug-06.jpg"],
-    "sizes": ["80 x 150 cm", "80 x 300 cm", "120 x 180 cm", "160 x 230 cm", "200 x 290 cm"],
-    "sizeOptions": [
-      { "label": "80 x 150 cm", "widthCm": 80, "lengthCm": 150, "price": 2190, "stock": 25, "isRunner": true },
-      { "label": "80 x 300 cm", "widthCm": 80, "lengthCm": 300, "price": 3690, "stock": 14, "isRunner": true },
-      { "label": "120 x 180 cm", "widthCm": 120, "lengthCm": 180, "price": 3890, "stock": 12 },
-      { "label": "160 x 230 cm", "widthCm": 160, "lengthCm": 230, "price": 5790, "stock": 9 },
-      { "label": "200 x 290 cm", "widthCm": 200, "lengthCm": 290, "price": 8190, "stock": 5 }
+    "gallery": [
+      "/rugs/rug-12.jpg",
+      "/rugs/rug-01.jpg",
+      "/rugs/rug-06.jpg"
     ],
-    "priceFrom": 2190,
-    "tags": ["Yolluk Seçeneği", "Çok Satan"],
+    "sizes": [
+      "80x150",
+      "80x300",
+      "100x200",
+      "100x300",
+      "120x180",
+      "160x230",
+      "200x290"
+    ],
+    "sizeOptions": [
+      {
+        "label": "80x150 cm",
+        "widthCm": 80,
+        "lengthCm": 150,
+        "price": 1950,
+        "stock": 14
+      },
+      {
+        "label": "80x300 cm",
+        "widthCm": 80,
+        "lengthCm": 300,
+        "price": 3550,
+        "stock": 9,
+        "isRunner": true
+      },
+      {
+        "label": "100x200 cm",
+        "widthCm": 100,
+        "lengthCm": 200,
+        "price": 2900,
+        "stock": 12
+      },
+      {
+        "label": "100x300 cm",
+        "widthCm": 100,
+        "lengthCm": 300,
+        "price": 4400,
+        "stock": 8,
+        "isRunner": true
+      },
+      {
+        "label": "120x180 cm",
+        "widthCm": 120,
+        "lengthCm": 180,
+        "price": 3150,
+        "stock": 15
+      },
+      {
+        "label": "160x230 cm",
+        "widthCm": 160,
+        "lengthCm": 230,
+        "price": 5450,
+        "stock": 10
+      },
+      {
+        "label": "200x290 cm",
+        "widthCm": 200,
+        "lengthCm": 290,
+        "price": 7900,
+        "stock": 6
+      }
+    ],
+    "priceFrom": 1950,
+    "tags": [
+      "Yolluk Seçeneği",
+      "Çok Satan"
+    ],
     "category": "Yolluk",
     "style": "Minimalist",
-    "rooms": ["Antre & Koridor", "Salon & Oturma Odası", "Yatak Odası"],
+    "rooms": [
+      "Koridor halısı",
+      "Salon halısı",
+      "Mutfak halısı",
+      "Balkon halısı",
+      "Banyo paspası"
+    ],
     "material": "Şönil & Pamuk",
     "colorFamily": "Krem & Bej",
     "colorName": "Ekru & İnce Antrasit Kare",
     "colorHex": "#EAE4D7",
     "variants": [
-      { "name": "Ekru & İnce Antrasit Kare", "hex": "#EAE4D7", "slug": "kuzey-ekru-kare-hali" },
-      { "name": "Antrasit Siyah & Ekru", "hex": "#2C2E33", "slug": "galata-soyut-firca-modern-hali" }
+      {
+        "name": "Ekru & İnce Antrasit Kare",
+        "hex": "#EAE4D7",
+        "slug": "kuzey-ekru-kare-hali"
+      },
+      {
+        "name": "Antrasit Siyah & Ekru",
+        "hex": "#2C2E33",
+        "slug": "galata-soyut-firca-modern-hali"
+      }
     ],
     "pileHeightMm": 10,
     "origin": "Yerli Üretim — Gaziantep",

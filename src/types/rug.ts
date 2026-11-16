@@ -12,11 +12,14 @@ export type RugStyle =
   | "Çocuk & Oyun";
 
 export type RugRoom =
-  | "Salon & Oturma Odası"
-  | "Yatak Odası"
-  | "Yemek Odası"
-  | "Çocuk Odası"
-  | "Antre & Koridor";
+  | "Salon halısı"
+  | "Oturma odası halısı"
+  | "Yatak odası halısı"
+  | "Çocuk odası halısı"
+  | "Mutfak halısı"
+  | "Koridor halısı"
+  | "Balkon halısı"
+  | "Banyo paspası";
 
 export type RugMaterial =
   | "Yün & Pamuk"

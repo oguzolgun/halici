@@ -79,23 +79,23 @@ export function Footer() {
             </h2>
             <ul className="space-y-2.5 text-sm text-ink/85">
               <li>
-                <Link href="/halilar?oda=Salon+%26+Oturma+Odas%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Salon için Halı Ölçüleri
+                <Link href="/halilar?oda=Salon+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Salon Halısı Seçimi
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?oda=Yemek+Odas%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Yemek Masası Altı Rehberi
+                <Link href="/halilar?oda=Oturma+odas%C4%B1+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Oturma Odası Halıları
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?oda=Yatak+Odas%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                <Link href="/halilar?oda=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
                   Yatak Odası Konfor Seçimi
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?malzeme=Do%C4%9Fal+J%C3%BCt+%26+Sisal" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Doğal Lif Bakım Önerileri
+                <Link href="/halilar?oda=Koridor+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Koridor & Yolluk Rehberi
                 </Link>
               </li>
             </ul>

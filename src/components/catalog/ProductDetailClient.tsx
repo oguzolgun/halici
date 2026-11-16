@@ -543,7 +543,7 @@ export function ProductDetailClient({ rug }: ProductDetailClientProps) {
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <div className="rounded-xl border border-line bg-ivory-soft p-4">
                     <p className="font-semibold text-navy">
-                      Salon & Oturma Odası
+                      Salon & Oturma Odası Halısı
                     </p>
                     <p className="mt-1 text-xs leading-relaxed text-stone">
                       Koltuk ön ayaklarının halının üzerine 15–20 cm basması odayı daha bütün ve geniş gösterir.
@@ -554,17 +554,17 @@ export function ProductDetailClient({ rug }: ProductDetailClientProps) {
                   </div>
 
                   <div className="rounded-xl border border-line bg-ivory-soft p-4">
-                    <p className="font-semibold text-navy">Yemek Odası</p>
+                    <p className="font-semibold text-navy">Mutfak & Balkon Halısı</p>
                     <p className="mt-1 text-xs leading-relaxed text-stone">
-                      Sandalyeler geri çekildiğinde arka ayakların halı kenarında takılmaması için masa çevresinde +60 cm pay bırakın.
+                      Tezgah veya masa önüne kolay süpürülebilir, pratik ve leke tutmayan kompakt ebatlar uygundur.
                     </p>
                     <p className="mt-2 text-xs font-semibold text-ink">
-                      Önerilen: 200x290 cm veya 240x340 cm
+                      Önerilen: 100x200 cm veya 120x180 cm
                     </p>
                   </div>
 
                   <div className="rounded-xl border border-line bg-ivory-soft p-4">
-                    <p className="font-semibold text-navy">Yatak Odası</p>
+                    <p className="font-semibold text-navy">Yatak Odası Halısı</p>
                     <p className="mt-1 text-xs leading-relaxed text-stone">
                       Çift kişilik yatağın alt üçte ikisini kapsayacak biçimde yanlardan 50–60 cm taşacak genişlik idealdir.
                     </p>
@@ -574,12 +574,12 @@ export function ProductDetailClient({ rug }: ProductDetailClientProps) {
                   </div>
 
                   <div className="rounded-xl border border-line bg-ivory-soft p-4">
-                    <p className="font-semibold text-navy">Antre & Koridor</p>
+                    <p className="font-semibold text-navy">Koridor Halısı (Yolluk)</p>
                     <p className="mt-1 text-xs leading-relaxed text-stone">
-                      Duvar kenarlarından 10–15 cm parke görünecek şekilde merkezlenen dar kesimler tercih edin.
+                      Duvar kenarlarından 10–15 cm parke payı bırakılarak merkezlenen uzun kesimler tercih edin.
                     </p>
                     <p className="mt-2 text-xs font-semibold text-ink">
-                      Önerilen: 80x150 cm veya 80x300 cm
+                      Önerilen: 80x300 cm veya 100x300 cm
                     </p>
                   </div>
                 </div>

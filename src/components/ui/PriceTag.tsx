@@ -33,8 +33,9 @@ export function PriceTag({
           {formatted}
         </span>
         {fromPrefix && (
-          <span className="text-xs font-normal text-stone-on-sand">
-            &apos;den başlayan fiyat
+          <span className="text-[11px] sm:text-xs font-normal text-stone-on-sand">
+            <span className="hidden sm:inline">&apos;den başlayan fiyat</span>
+            <span className="sm:hidden">&apos;den</span>
           </span>
         )}
       </div>

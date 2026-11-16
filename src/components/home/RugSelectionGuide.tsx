@@ -11,15 +11,15 @@ const GUIDE_CARDS = [
     eyebrow: "01 • Odaya Göre",
     title: "Yaşam alanınızın temposuna uygun doku",
     description:
-      "Salon, yemek odası, yatak odası veya antre kullanımına göre hav yüksekliğini belirleyin.",
+      "Salon, oturma odası, yatak odası, mutfak veya koridor kullanımına göre ideal halıyı belirleyin.",
     image: "/rugs/rug-01.jpg",
     links: [
-      { label: "Salon & Oturma", href: "/halilar?oda=Salon+%26+Oturma+Odas%C4%B1" },
-      { label: "Yatak Odası", href: "/halilar?oda=Yatak+Odas%C4%B1" },
-      { label: "Yemek Odası", href: "/halilar?oda=Yemek+Odas%C4%B1" },
-      { label: "Antre & Yolluk", href: "/halilar?oda=Antre+%26+Koridor" },
+      { label: "Salon Halısı", href: "/halilar?oda=Salon+hal%C4%B1s%C4%B1" },
+      { label: "Oturma Odası", href: "/halilar?oda=Oturma+odas%C4%B1+hal%C4%B1s%C4%B1" },
+      { label: "Yatak Odası", href: "/halilar?oda=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1" },
+      { label: "Koridor Halısı", href: "/halilar?oda=Koridor+hal%C4%B1s%C4%B1" },
     ],
-    primaryHref: "/halilar?oda=Salon+%26+Oturma+Odas%C4%B1",
+    primaryHref: "/halilar?oda=Salon+hal%C4%B1s%C4%B1",
   },
   {
     key: "olcu",
@@ -27,15 +27,15 @@ const GUIDE_CARDS = [
     eyebrow: "02 • Ölçüye Göre",
     title: "Mobilyalarla orantılı doğru boyut",
     description:
-      "Ön ayakları halının üzerine basan 160x230 veya geniş 200x290 ölçülerle odayı büyütün.",
+      "80x150'den 200x290'a 7 standart ebatımızla mobilyalarınıza ve odanıza tam oturan ölçüyü seçin.",
     image: "/rugs/rug-12.jpg",
     links: [
-      { label: "120 x 180 cm", href: "/halilar?olcu=120+x+180+cm" },
-      { label: "160 x 230 cm", href: "/halilar?olcu=160+x+230+cm" },
-      { label: "200 x 290 cm", href: "/halilar?olcu=200+x+290+cm" },
-      { label: "80 x 300 Yolluk", href: "/halilar?olcu=80+x+300+cm" },
+      { label: "80x150 cm", href: "/halilar?olcu=80x150" },
+      { label: "80x300 Yolluk", href: "/halilar?olcu=80x300" },
+      { label: "160x230 cm", href: "/halilar?olcu=160x230" },
+      { label: "200x290 cm", href: "/halilar?olcu=200x290" },
     ],
-    primaryHref: "/halilar?olcu=160+x+230+cm",
+    primaryHref: "/halilar?olcu=160x230",
   },
   {
     key: "stil",

@@ -30,20 +30,24 @@ const MEGA_CATEGORIES = [
 ];
 
 const MEGA_ROOMS = [
-  { label: "Salon & Oturma Odası", href: "/halilar?oda=Salon+%26+Oturma+Odas%C4%B1" },
-  { label: "Yatak Odası", href: "/halilar?oda=Yatak+Odas%C4%B1" },
-  { label: "Yemek Odası", href: "/halilar?oda=Yemek+Odas%C4%B1" },
-  { label: "Çocuk Odası", href: "/halilar?oda=%C3%87ocuk+Odas%C4%B1" },
-  { label: "Antre & Koridor", href: "/halilar?oda=Antre+%26+Koridor" },
+  { label: "Salon halısı", href: "/halilar?oda=Salon+hal%C4%B1s%C4%B1" },
+  { label: "Oturma odası halısı", href: "/halilar?oda=Oturma+odas%C4%B1+hal%C4%B1s%C4%B1" },
+  { label: "Yatak odası halısı", href: "/halilar?oda=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1" },
+  { label: "Çocuk odası halısı", href: "/halilar?oda=%C3%87ocuk+odas%C4%B1+hal%C4%B1s%C4%B1" },
+  { label: "Mutfak halısı", href: "/halilar?oda=Mutfak+hal%C4%B1s%C4%B1" },
+  { label: "Koridor halısı", href: "/halilar?oda=Koridor+hal%C4%B1s%C4%B1" },
+  { label: "Balkon halısı", href: "/halilar?oda=Balkon+hal%C4%B1s%C4%B1" },
+  { label: "Banyo paspası", href: "/halilar?oda=Banyo+paspas%C4%B1" },
 ];
 
 const MEGA_SIZES = [
-  { label: "80 x 150 cm", href: "/halilar?olcu=80+x+150+cm" },
-  { label: "80 x 300 cm (Yolluk)", href: "/halilar?olcu=80+x+300+cm" },
-  { label: "120 x 180 cm", href: "/halilar?olcu=120+x+180+cm" },
-  { label: "160 x 230 cm", href: "/halilar?olcu=160+x+230+cm" },
-  { label: "200 x 290 cm", href: "/halilar?olcu=200+x+290+cm" },
-  { label: "240 x 340 cm", href: "/halilar?olcu=240+x+340+cm" },
+  { label: "80x150 cm", href: "/halilar?olcu=80x150" },
+  { label: "80x300 cm (Yolluk)", href: "/halilar?olcu=80x300" },
+  { label: "100x200 cm", href: "/halilar?olcu=100x200" },
+  { label: "100x300 cm (Yolluk)", href: "/halilar?olcu=100x300" },
+  { label: "120x180 cm", href: "/halilar?olcu=120x180" },
+  { label: "160x230 cm", href: "/halilar?olcu=160x230" },
+  { label: "200x290 cm", href: "/halilar?olcu=200x290" },
 ];
 
 export function Header() {
