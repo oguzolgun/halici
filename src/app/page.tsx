@@ -31,8 +31,8 @@ export default function HomePage() {
     <>
       <RugRackHero rugs={heroRugs} />
       <TrustBar />
-      <RugSelectionGuide />
       <CategoryGrid categories={categories} />
+      <RugSelectionGuide />
       <BestSellersCarousel rugs={bestsellers} />
       <BrandPromise />
       <CustomerReviews reviews={reviews} />

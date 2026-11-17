@@ -25,7 +25,7 @@ export function BestSellersCarousel({ rugs }: BestSellersCarouselProps) {
   };
 
   return (
-    <section className="py-16 sm:py-20">
+    <section className="border-b border-line bg-sand/30 py-16 sm:py-20">
       <Container className="space-y-8">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <SectionHeading

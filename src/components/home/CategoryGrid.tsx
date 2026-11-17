@@ -11,7 +11,7 @@ interface CategoryGridProps {
 
 export function CategoryGrid({ categories }: CategoryGridProps) {
   return (
-    <section id="koleksiyonlar" className="border-t border-line bg-sand/30 py-16 sm:py-20">
+    <section id="koleksiyonlar" className="border-b border-line bg-sand/30 py-16 sm:py-20">
       <Container className="space-y-10">
         <SectionHeading
           eyebrow="Koleksiyonlar"

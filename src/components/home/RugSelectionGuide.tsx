@@ -73,7 +73,7 @@ const GUIDE_CARDS = [
 
 export function RugSelectionGuide() {
   return (
-    <section id="secme-rehberi" className="py-16 sm:py-20">
+    <section id="secme-rehberi" className="border-b border-line bg-ivory py-16 sm:py-20">
       <Container className="space-y-10">
         <SectionHeading
           eyebrow="Halı Seçme Rehberi"
