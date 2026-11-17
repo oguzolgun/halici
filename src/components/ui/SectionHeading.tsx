@@ -9,6 +9,7 @@ interface SectionHeadingProps {
   actionHref?: string;
   align?: "left" | "center";
   className?: string;
+  wide?: boolean;
 }
 
 export function SectionHeading({
@@ -19,6 +20,7 @@ export function SectionHeading({
   actionHref,
   align = "left",
   className = "",
+  wide = true,
 }: SectionHeadingProps) {
   const isCenter = align === "center";
 
@@ -30,7 +32,15 @@ export function SectionHeading({
           : "md:flex-row md:items-end md:justify-between"
       } ${className}`}
     >
-      <div className={isCenter ? "max-w-2xl" : "max-w-2xl"}>
+      <div
+        className={
+          isCenter
+            ? "max-w-2xl"
+            : wide
+            ? "flex-1 max-w-full lg:max-w-4xl xl:max-w-5xl"
+            : "flex-1 max-w-2xl lg:max-w-3xl"
+        }
+      >
         {eyebrow && (
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-terracotta-deep">
             {eyebrow}
@@ -40,7 +50,7 @@ export function SectionHeading({
           {title}
         </h2>
         {subtitle && (
-          <p className="mt-3 text-base leading-relaxed text-stone-on-sand">
+          <p className="mt-2 text-sm leading-relaxed text-stone-on-sand sm:text-base">
             {subtitle}
           </p>
         )}
@@ -49,7 +59,7 @@ export function SectionHeading({
       {actionLabel && actionHref && !isCenter && (
         <Link
           href={actionHref}
-          className="group inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-navy transition-colors hover:text-terracotta-deep"
+          className="group inline-flex shrink-0 items-center gap-2 pb-1 text-sm font-semibold text-navy transition-colors hover:text-terracotta-deep"
         >
           <span>{actionLabel}</span>
           <ArrowRight
