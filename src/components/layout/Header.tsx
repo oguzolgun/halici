@@ -458,22 +458,48 @@ export function Header() {
         {mobileOpen && (
           <div className="overflow-hidden border-t border-line bg-ivory lg:hidden">
             <Container className="space-y-5 py-6">
-              <div className="space-y-1">
-                <Link
-                  href="/halilar"
-                  className="block rounded-lg px-3 py-2.5 text-base font-semibold text-navy hover:bg-sand/50"
-                >
-                  Tüm Halılar
-                </Link>
-                {MEGA_CATEGORIES.map((cat) => (
+              <div>
+                <div className="flex items-center justify-between pb-2">
+                  <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
+                    Kategoriler
+                  </p>
                   <Link
-                    key={cat.href}
-                    href={cat.href}
-                    className="block rounded-lg px-3 py-2 text-sm text-ink/90 hover:bg-sand/50"
+                    href="/halilar"
+                    onClick={() => setMobileOpen(false)}
+                    className="text-xs font-semibold text-navy hover:underline"
                   >
-                    {cat.label}
+                    Tümünü Gör →
                   </Link>
-                ))}
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {MEGA_CATEGORIES.map((cat) => (
+                    <Link
+                      key={cat.href}
+                      href={cat.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="group flex flex-col justify-between rounded-xl border border-line bg-sand/35 p-2.5 transition-colors hover:border-navy/40 hover:bg-sand/60"
+                    >
+                      <span className="text-xs font-semibold text-ink group-hover:text-navy">
+                        {cat.label}
+                      </span>
+                      <span className="mt-1 line-clamp-1 text-[10px] text-stone">
+                        {cat.desc}
+                      </span>
+                    </Link>
+                  ))}
+                  <Link
+                    href="/halilar"
+                    onClick={() => setMobileOpen(false)}
+                    className="group flex flex-col justify-between rounded-xl border border-navy/25 bg-navy/95 p-2.5 text-ivory transition-colors hover:bg-navy"
+                  >
+                    <span className="text-xs font-semibold text-ivory">
+                      Tüm Halılar
+                    </span>
+                    <span className="mt-1 text-[10px] text-ivory/75">
+                      Kataloğu Aç →
+                    </span>
+                  </Link>
+                </div>
               </div>
               <div className="border-t border-line pt-4 space-y-1">
                 <Link
