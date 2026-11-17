@@ -79,8 +79,8 @@ export function RugSelectionGuide() {
           eyebrow="Halı Seçme Rehberi"
           title="Dört adımda evinize en uygun halıyı bulun."
           subtitle="Ölçüden renge, kullanım yoğunluğundan stile kadar doğru soruları yanıtlayarak halı seçimini kolaylaştırıyoruz."
-          actionLabel="Tüm kataloğu filtrele"
-          actionHref="/halilar"
+          actionLabel="Detaylı rehberi incele"
+          actionHref="/secme-rehberi"
         />
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

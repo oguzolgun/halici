@@ -275,17 +275,25 @@ export function Header() {
             </div>
 
             <Link
-              href="/#koleksiyonlar"
+              href="/koleksiyonlar"
               prefetch={false}
-              className="py-2 text-sm font-medium text-ink/85 transition-colors hover:text-navy"
+              className={`py-2 text-sm font-medium transition-colors ${
+                pathname === "/koleksiyonlar"
+                  ? "text-navy font-semibold"
+                  : "text-ink/85 hover:text-navy"
+              }`}
             >
               Koleksiyonlar
             </Link>
 
             <Link
-              href="/#secme-rehberi"
+              href="/secme-rehberi"
               prefetch={false}
-              className="py-2 text-sm font-medium text-ink/85 transition-colors hover:text-navy"
+              className={`py-2 text-sm font-medium transition-colors ${
+                pathname === "/secme-rehberi"
+                  ? "text-navy font-semibold"
+                  : "text-ink/85 hover:text-navy"
+              }`}
             >
               Seçme Rehberi
             </Link>
@@ -510,19 +518,29 @@ export function Header() {
               </div>
               <div className="border-t border-line pt-4 space-y-1">
                 <Link
-                  href="/#secme-rehberi"
+                  href="/koleksiyonlar"
+                  onClick={() => setMobileOpen(false)}
+                  className="block rounded-lg px-3 py-2 text-sm font-medium text-ink hover:bg-sand/50"
+                >
+                  Tüm Koleksiyonlar
+                </Link>
+                <Link
+                  href="/secme-rehberi"
+                  onClick={() => setMobileOpen(false)}
                   className="block rounded-lg px-3 py-2 text-sm font-medium text-ink hover:bg-sand/50"
                 >
                   Halı Seçme Rehberi
                 </Link>
                 <Link
                   href="/hakkimizda"
+                  onClick={() => setMobileOpen(false)}
                   className="block rounded-lg px-3 py-2 text-sm font-medium text-ink hover:bg-sand/50"
                 >
                   Hakkımızda
                 </Link>
                 <Link
                   href="/iletisim"
+                  onClick={() => setMobileOpen(false)}
                   className="block rounded-lg px-3 py-2 text-sm font-medium text-ink hover:bg-sand/50"
                 >
                   İletişim

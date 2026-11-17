@@ -41,9 +41,14 @@ export function Footer() {
 
           {/* Ana Kategoriler */}
           <div className="lg:col-span-2 space-y-3">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">
-              Ana Kategoriler
-            </h2>
+            <Link
+              href="/koleksiyonlar"
+              prefetch={false}
+              className="group inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-[0.16em] text-navy hover:text-terracotta-deep"
+            >
+              <span>Koleksiyonlar</span>
+              <span className="text-[10px] transition-transform group-hover:translate-x-0.5">→</span>
+            </Link>
             <ul className="space-y-2 text-sm text-ink/85">
               <li>
                 <Link href="/halilar?kategori=Mutfak+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
@@ -143,6 +148,16 @@ export function Footer() {
               Kurumsal & Destek
             </h2>
             <ul className="space-y-2.5 text-sm text-ink/85">
+              <li>
+                <Link href="/koleksiyonlar" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Tüm Koleksiyonlar
+                </Link>
+              </li>
+              <li>
+                <Link href="/secme-rehberi" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Halı Seçme Rehberi
+                </Link>
+              </li>
               <li>
                 <Link href="/hakkimizda" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
                   Hakkımızda

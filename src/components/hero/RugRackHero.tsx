@@ -587,7 +587,7 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
               </div>
 
               <div className="pt-2">
-                <Button href="/halilar" variant="secondary" size="md">
+                <Button href="/koleksiyonlar" variant="secondary" size="md">
                   Tüm Koleksiyonu Gör
                 </Button>
               </div>

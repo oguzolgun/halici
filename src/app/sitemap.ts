@@ -19,6 +19,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/koleksiyonlar`,
+      lastModified: new Date("2026-11-17"),
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/secme-rehberi`,
+      lastModified: new Date("2026-11-17"),
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
       url: `${baseUrl}/hakkimizda`,
       lastModified: new Date("2026-11-11"),
       changeFrequency: "monthly",

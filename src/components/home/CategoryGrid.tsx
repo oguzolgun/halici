@@ -17,8 +17,8 @@ export function CategoryGrid({ categories }: CategoryGridProps) {
           eyebrow="Koleksiyonlar"
           title="Her odanın ruhuna göre kürasyon"
           subtitle="Mutfak ve banyodan salon ve yolluklara kadar evinize özel 8 ana kategorimizi keşfedin."
-          actionLabel="Tümünü gör"
-          actionHref="/halilar"
+          actionLabel="Tüm koleksiyonları gör"
+          actionHref="/koleksiyonlar"
         />
 
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-5 lg:grid-cols-4">
