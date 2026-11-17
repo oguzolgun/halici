@@ -21,23 +21,26 @@ import { useFavoritesStore } from "@/store/favorites";
 import type { RugProduct } from "@/types/rug";
 import { Container } from "../ui/Container";
 
-const MEGA_CATEGORIES = [
-  { label: "Modern Halılar", href: "/halilar?kategori=Modern", desc: "Mimari kabartma & yalın çizgiler" },
-  { label: "Vintage & Eskitme", href: "/halilar?kategori=Vintage", desc: "Madalyon mirasından modern yorumlar" },
-  { label: "Doğal Jüt & Kilim", href: "/halilar?kategori=Do%C4%9Fal", desc: "Katkısız jüt, sisal ve yün kilimler" },
-  { label: "Çocuk Odası", href: "/halilar?kategori=%C3%87ocuk", desc: "OEKO-TEX sertifikalı, yıkanabilir" },
-  { label: "Yolluklar", href: "/halilar?kategori=Yolluk", desc: "Antre ve koridorlar için 80x150 / 80x300" },
+const MEGA_MAIN_CATEGORIES = [
+  { label: "Mutfak Halısı", href: "/halilar?kategori=Mutfak+hal%C4%B1s%C4%B1", desc: "Leke tutmaz, pratik dokuma" },
+  { label: "Banyo Paspası", href: "/halilar?kategori=Banyo+paspas%C4%B1", desc: "Hızlı kuruyan, yumuşak doku" },
+  { label: "Salon Halısı", href: "/halilar?kategori=Salon+hal%C4%B1s%C4%B1", desc: "Zengin desen ve mimari dokular" },
+  { label: "Çocuk Halısı", href: "/halilar?kategori=%C3%87ocuk+hal%C4%B1s%C4%B1", desc: "Antialerjik ve güvenli modeller" },
+  { label: "Yatak Odası Halısı", href: "/halilar?kategori=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1", desc: "Sıcak ve konforlu zemin hissi" },
+  { label: "Yolluk", href: "/halilar?kategori=Yolluk", desc: "Antre ve koridorlar için şıklık" },
+  { label: "Kilim", href: "/halilar?kategori=Kilim", desc: "Doğal iplik, çift taraflı dokuma" },
+  { label: "Banyo Takımı", href: "/halilar?kategori=Banyo+tak%C4%B1m%C4%B1", desc: "Set konsepti & kaymaz taban" },
 ];
 
-const MEGA_ROOMS = [
-  { label: "Salon halısı", href: "/halilar?oda=Salon+hal%C4%B1s%C4%B1" },
-  { label: "Oturma odası halısı", href: "/halilar?oda=Oturma+odas%C4%B1+hal%C4%B1s%C4%B1" },
-  { label: "Yatak odası halısı", href: "/halilar?oda=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1" },
-  { label: "Çocuk odası halısı", href: "/halilar?oda=%C3%87ocuk+odas%C4%B1+hal%C4%B1s%C4%B1" },
-  { label: "Mutfak halısı", href: "/halilar?oda=Mutfak+hal%C4%B1s%C4%B1" },
-  { label: "Koridor halısı", href: "/halilar?oda=Koridor+hal%C4%B1s%C4%B1" },
-  { label: "Balkon halısı", href: "/halilar?oda=Balkon+hal%C4%B1s%C4%B1" },
-  { label: "Banyo paspası", href: "/halilar?oda=Banyo+paspas%C4%B1" },
+const MEGA_SUB_CATEGORIES = [
+  { label: "Outlet Ürünler", href: "/halilar?altKategori=Outlet+%C3%BCr%C3%BCnler", desc: "Fırsat fiyatlı özel seriler" },
+  { label: "Vintage Halı", href: "/halilar?altKategori=Vintage+hal%C4%B1", desc: "Eskitme ve klasik miras" },
+  { label: "Koridor Halısı", href: "/halilar?altKategori=Koridor+hal%C4%B1s%C4%B1", desc: "Geçiş alanları için kesimler" },
+  { label: "Kaymaz Taban", href: "/halilar?altKategori=Kaymaz+taban", desc: "Güvenli ve sabit zemin" },
+  { label: "Kesme Halı", href: "/halilar?altKategori=Kesme+hal%C4%B1", desc: "İstediğiniz ölçüde rulo kesim" },
+  { label: "Makinede Yıkanabilir", href: "/halilar?altKategori=Makinede+y%C4%B1kanabilir", desc: "Kolay temizlik ve hijyen" },
+  { label: "Sisal Halı", href: "/halilar?altKategori=Sisal+hal%C4%B1", desc: "Doğal bitki lifleri ve jüt" },
+  { label: "Dekoratif Halı", href: "/halilar?altKategori=Dekoratif+hal%C4%B1", desc: "Modern tasarım vurguları" },
 ];
 
 const MEGA_SIZES = [
@@ -366,40 +369,38 @@ export function Header() {
             <Container className="grid grid-cols-12 gap-8 py-8">
               <div className="col-span-4 space-y-3 border-r border-line pr-6">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
-                  Kategoriler
+                  Ana Kategoriler
                 </p>
-                <ul className="space-y-2.5">
-                  {MEGA_CATEGORIES.map((cat) => (
+                <ul className="grid grid-cols-2 gap-x-2 gap-y-1">
+                  {MEGA_MAIN_CATEGORIES.map((cat) => (
                     <li key={cat.href}>
                       <Link
                         href={cat.href}
-                        className="group block rounded-lg px-2.5 py-1.5 transition-colors hover:bg-sand/50"
+                        className="group block rounded-lg px-2 py-1.5 transition-colors hover:bg-sand/50"
                       >
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-semibold text-ink group-hover:text-navy">
-                            {cat.label}
-                          </span>
-                          <ArrowRight className="h-3.5 w-3.5 text-stone opacity-0 transition-all group-hover:translate-x-0.5 group-hover:opacity-100" aria-hidden="true" />
-                        </div>
-                        <p className="text-xs text-stone">{cat.desc}</p>
+                        <span className="block text-xs font-semibold text-ink group-hover:text-navy truncate">
+                          {cat.label}
+                        </span>
+                        <p className="line-clamp-1 text-[11px] text-stone">{cat.desc}</p>
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="col-span-3 space-y-3">
+              <div className="col-span-3 space-y-3 border-r border-line pr-6">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
-                  Odaya Göre
+                  Alt Kategoriler
                 </p>
-                <ul className="space-y-2">
-                  {MEGA_ROOMS.map((room) => (
-                    <li key={room.href}>
+                <ul className="space-y-1">
+                  {MEGA_SUB_CATEGORIES.map((sub) => (
+                    <li key={sub.href}>
                       <Link
-                        href={room.href}
-                        className="block py-1 text-sm text-ink/85 transition-colors hover:text-navy hover:underline underline-offset-4"
+                        href={sub.href}
+                        className="block rounded-lg px-2 py-1 text-xs text-ink/85 transition-colors hover:bg-sand/50 hover:text-navy"
                       >
-                        {room.label}
+                        <span className="font-medium text-ink">{sub.label}</span>
+                        <span className="ml-1 text-[11px] text-stone">({sub.desc})</span>
                       </Link>
                     </li>
                   ))}
@@ -410,12 +411,12 @@ export function Header() {
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
                   Ölçüye Göre
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-1.5">
                   {MEGA_SIZES.map((sz) => (
                     <li key={sz.href}>
                       <Link
                         href={sz.href}
-                        className="block py-1 text-sm text-ink/85 transition-colors hover:text-navy hover:underline underline-offset-4"
+                        className="block py-0.5 text-xs text-ink/85 transition-colors hover:text-navy hover:underline underline-offset-4"
                       >
                         {sz.label}
                       </Link>
@@ -461,7 +462,7 @@ export function Header() {
               <div>
                 <div className="flex items-center justify-between pb-2">
                   <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
-                    Kategoriler
+                    Ana Kategoriler
                   </p>
                   <Link
                     href="/halilar"
@@ -472,7 +473,7 @@ export function Header() {
                   </Link>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {MEGA_CATEGORIES.map((cat) => (
+                  {MEGA_MAIN_CATEGORIES.map((cat) => (
                     <Link
                       key={cat.href}
                       href={cat.href}
@@ -482,23 +483,29 @@ export function Header() {
                       <span className="text-xs font-semibold text-ink group-hover:text-navy">
                         {cat.label}
                       </span>
-                      <span className="mt-1 line-clamp-1 text-[10px] text-stone">
+                      <span className="mt-0.5 line-clamp-1 text-[10px] text-stone">
                         {cat.desc}
                       </span>
                     </Link>
                   ))}
-                  <Link
-                    href="/halilar"
-                    onClick={() => setMobileOpen(false)}
-                    className="group flex flex-col justify-between rounded-xl border border-navy/25 bg-navy/95 p-2.5 text-ivory transition-colors hover:bg-navy"
-                  >
-                    <span className="text-xs font-semibold text-ivory">
-                      Tüm Halılar
-                    </span>
-                    <span className="mt-1 text-[10px] text-ivory/75">
-                      Kataloğu Aç →
-                    </span>
-                  </Link>
+                </div>
+              </div>
+
+              <div className="border-t border-line pt-3">
+                <p className="px-1 pb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
+                  Alt Kategoriler
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  {MEGA_SUB_CATEGORIES.map((sub) => (
+                    <Link
+                      key={sub.href}
+                      href={sub.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="rounded-lg border border-line/70 bg-ivory-soft px-2.5 py-1.5 text-xs text-ink/85 transition-colors hover:border-navy/40 hover:text-navy"
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
               <div className="border-t border-line pt-4 space-y-1">

@@ -8,18 +8,18 @@ const GUIDE_CARDS = [
   {
     key: "oda",
     icon: Sofa,
-    eyebrow: "01 • Odaya Göre",
+    eyebrow: "01 • Alana Göre",
     title: "Yaşam alanınızın temposuna uygun doku",
     description:
-      "Salon, oturma odası, yatak odası, mutfak veya koridor kullanımına göre ideal halıyı belirleyin.",
+      "Salon, mutfak, banyo, yatak odası veya koridor kullanımına göre ideal halıyı belirleyin.",
     image: "/rugs/rug-01.jpg",
     links: [
-      { label: "Salon Halısı", href: "/halilar?oda=Salon+hal%C4%B1s%C4%B1" },
-      { label: "Oturma Odası", href: "/halilar?oda=Oturma+odas%C4%B1+hal%C4%B1s%C4%B1" },
-      { label: "Yatak Odası", href: "/halilar?oda=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1" },
-      { label: "Koridor Halısı", href: "/halilar?oda=Koridor+hal%C4%B1s%C4%B1" },
+      { label: "Salon Halısı", href: "/halilar?kategori=Salon+hal%C4%B1s%C4%B1" },
+      { label: "Mutfak Halısı", href: "/halilar?kategori=Mutfak+hal%C4%B1s%C4%B1" },
+      { label: "Banyo Paspası", href: "/halilar?kategori=Banyo+paspas%C4%B1" },
+      { label: "Yolluk", href: "/halilar?kategori=Yolluk" },
     ],
-    primaryHref: "/halilar?oda=Salon+hal%C4%B1s%C4%B1",
+    primaryHref: "/halilar?kategori=Salon+hal%C4%B1s%C4%B1",
   },
   {
     key: "olcu",
@@ -40,18 +40,18 @@ const GUIDE_CARDS = [
   {
     key: "stil",
     icon: Compass,
-    eyebrow: "03 • Stile Göre",
-    title: "Minimalist çizgiden Anadolu kilimine",
+    eyebrow: "03 • Özelliğe Göre",
+    title: "İhtiyacınıza uygun pratik zemin çözümleri",
     description:
-      "Evinizin mimari diliyle uyumlu zamansız motifleri veya yalın modern dokuları seçin.",
+      "Makinede yıkanabilir, kaymaz tabanlı, kesme veya otantik vintage serilerimizi keşfedin.",
     image: "/rugs/rug-05.jpg",
     links: [
-      { label: "Minimalist", href: "/halilar?stil=Minimalist" },
-      { label: "Anadolu & Kilim", href: "/halilar?stil=Anadolu+%26+Kilim" },
-      { label: "Vintage Eskitme", href: "/halilar?stil=Vintage+Eskitme" },
-      { label: "Bohem & Doğal", href: "/halilar?stil=Bohem+%26+Do%C4%9Fal" },
+      { label: "Vintage Halı", href: "/halilar?altKategori=Vintage+hal%C4%B1" },
+      { label: "Kaymaz Taban", href: "/halilar?altKategori=Kaymaz+taban" },
+      { label: "Yıkanabilir", href: "/halilar?altKategori=Makinede+y%C4%B1kanabilir" },
+      { label: "Sisal & Jüt", href: "/halilar?altKategori=Sisal+hal%C4%B1" },
     ],
-    primaryHref: "/halilar?stil=Anadolu+%26+Kilim",
+    primaryHref: "/halilar?altKategori=Makinede+y%C4%B1kanabilir",
   },
   {
     key: "renk",

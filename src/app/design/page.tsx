@@ -246,7 +246,7 @@ export default function DesignSystemPage() {
                 <Breadcrumb
                   items={[
                     { label: "Halılar", href: "/halilar" },
-                    { label: "Modern", href: "/halilar?kategori=Modern" },
+                    { label: "Salon Halısı", href: "/halilar?kategori=Salon+hal%C4%B1s%C4%B1" },
                     { label: "Mira Mimari Kabartma" },
                   ]}
                 />

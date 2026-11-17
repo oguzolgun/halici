@@ -39,64 +39,99 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Koleksiyonlar */}
+          {/* Ana Kategoriler */}
           <div className="lg:col-span-2 space-y-3">
             <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">
-              Koleksiyonlar
+              Ana Kategoriler
             </h2>
-            <ul className="space-y-2.5 text-sm text-ink/85">
+            <ul className="space-y-2 text-sm text-ink/85">
               <li>
-                <Link href="/halilar?kategori=Modern" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Modern Halılar
+                <Link href="/halilar?kategori=Mutfak+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Mutfak Halısı
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?kategori=Vintage" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Vintage & Eskitme
+                <Link href="/halilar?kategori=Banyo+paspas%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Banyo Paspası
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?kategori=Do%C4%9Fal" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Doğal Jüt & Kilim
+                <Link href="/halilar?kategori=Salon+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Salon Halısı
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?kategori=%C3%87ocuk" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Çocuk Odası
+                <Link href="/halilar?kategori=%C3%87ocuk+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Çocuk Halısı
+                </Link>
+              </li>
+              <li>
+                <Link href="/halilar?kategori=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Yatak Odası Halısı
                 </Link>
               </li>
               <li>
                 <Link href="/halilar?kategori=Yolluk" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Yolluklar
+                  Yolluk
+                </Link>
+              </li>
+              <li>
+                <Link href="/halilar?kategori=Kilim" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Kilim
+                </Link>
+              </li>
+              <li>
+                <Link href="/halilar?kategori=Banyo+tak%C4%B1m%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Banyo Takımı
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Seçme Rehberi */}
+          {/* Alt Kategoriler & Özellikler */}
           <div className="lg:col-span-3 space-y-3">
             <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">
-              Halı Seçme Rehberi
+              Alt Kategoriler
             </h2>
-            <ul className="space-y-2.5 text-sm text-ink/85">
+            <ul className="space-y-2 text-sm text-ink/85">
               <li>
-                <Link href="/halilar?oda=Salon+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Salon Halısı Seçimi
+                <Link href="/halilar?altKategori=Outlet+%C3%BCr%C3%BCnler" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Outlet Ürünler
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?oda=Oturma+odas%C4%B1+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Oturma Odası Halıları
+                <Link href="/halilar?altKategori=Vintage+hal%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Vintage Halı
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?oda=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Yatak Odası Konfor Seçimi
+                <Link href="/halilar?altKategori=Koridor+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Koridor Halısı
                 </Link>
               </li>
               <li>
-                <Link href="/halilar?oda=Koridor+hal%C4%B1s%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
-                  Koridor & Yolluk Rehberi
+                <Link href="/halilar?altKategori=Kaymaz+taban" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Kaymaz Taban Halılar
+                </Link>
+              </li>
+              <li>
+                <Link href="/halilar?altKategori=Kesme+hal%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Kesme Halı & Rulo
+                </Link>
+              </li>
+              <li>
+                <Link href="/halilar?altKategori=Makinede+y%C4%B1kanabilir" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Makinede Yıkanabilir
+                </Link>
+              </li>
+              <li>
+                <Link href="/halilar?altKategori=Sisal+hal%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Sisal & Jüt Halı
+                </Link>
+              </li>
+              <li>
+                <Link href="/halilar?altKategori=Dekoratif+hal%C4%B1" prefetch={false} className="hover:text-navy hover:underline underline-offset-4">
+                  Dekoratif Halı Modelleri
                 </Link>
               </li>
             </ul>

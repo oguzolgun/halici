@@ -13,6 +13,7 @@ import type {
   RugCategory,
   RugFilterParams,
   RugProduct,
+  RugSubcategory,
 } from "@/types/rug";
 
 const rugsData: RugProduct[] = rawRugs as RugProduct[];
@@ -142,34 +143,52 @@ export function getCategoriesSummary(): CategorySummary[] {
     image: string;
   }> = [
     {
-      slug: "Modern",
-      title: "Modern",
-      subtitle: "Mimari çizgiler ve sakin dokular",
+      slug: "Mutfak halısı",
+      title: "Mutfak Halısı",
+      subtitle: "Leke tutmaz, silinebilir ve pratik dokular",
+      image: "/rugs/rug-04.jpg",
+    },
+    {
+      slug: "Banyo paspası",
+      title: "Banyo Paspası",
+      subtitle: "Hızlı kuruyan, yumuşak ve emici yüzey",
+      image: "/rugs/rug-06.jpg",
+    },
+    {
+      slug: "Salon halısı",
+      title: "Salon Halısı",
+      subtitle: "Geniş yaşam alanları için zengin ve mimari dokular",
       image: "/rugs/rug-01.jpg",
     },
     {
-      slug: "Vintage",
-      title: "Vintage",
-      subtitle: "Zamansız eskitme madalyonlar",
-      image: "/rugs/rug-02.jpg",
-    },
-    {
-      slug: "Çocuk",
-      title: "Çocuk",
-      subtitle: "Organik pamuk, antialerjik yüzey",
+      slug: "Çocuk halısı",
+      title: "Çocuk Halısı",
+      subtitle: "Antialerjik, organik dokulu ve güvenli modeller",
       image: "/rugs/rug-07.jpg",
     },
     {
-      slug: "Doğal",
-      title: "Doğal",
-      subtitle: "Katkısız jüt, yün ve kilim serisi",
-      image: "/rugs/rug-04.jpg",
+      slug: "Yatak odası halısı",
+      title: "Yatak Odası Halısı",
+      subtitle: "Güne konforla başlamanızı sağlayan yumuşaklık",
+      image: "/rugs/rug-03.jpg",
     },
     {
       slug: "Yolluk",
       title: "Yolluk",
-      subtitle: "Antre ve koridorlar için dar kesimler",
+      subtitle: "Antre ve koridorlar için boydan boya zarafet",
       image: "/rugs/rug-12.jpg",
+    },
+    {
+      slug: "Kilim",
+      title: "Kilim",
+      subtitle: "Geleneksel motifler ve çift taraflı doğal dokuma",
+      image: "/rugs/rug-05.jpg",
+    },
+    {
+      slug: "Banyo takımı",
+      title: "Banyo Takımı",
+      subtitle: "Takım uyumu ve kaymaz tabanlı set konsepti",
+      image: "/rugs/rug-02.jpg",
     },
   ];
 
@@ -178,6 +197,7 @@ export function getCategoriesSummary(): CategorySummary[] {
     count: rugsData.filter(
       (r) =>
         r.category === def.slug ||
+        (r.categories && r.categories.includes(def.slug)) ||
         (def.slug === "Yolluk" && r.sizeOptions.some((s) => s.isRunner))
     ).length,
   }));
@@ -199,11 +219,25 @@ export function getFilterOptions() {
     new Set(rugsData.map((r) => r.material))
   );
   const categories: RugCategory[] = [
-    "Modern",
-    "Vintage",
-    "Çocuk",
-    "Doğal",
+    "Mutfak halısı",
+    "Banyo paspası",
+    "Salon halısı",
+    "Çocuk halısı",
+    "Yatak odası halısı",
     "Yolluk",
+    "Kilim",
+    "Banyo takımı",
+  ];
+
+  const subcategories: RugSubcategory[] = [
+    "Outlet ürünler",
+    "Vintage halı",
+    "Koridor halısı",
+    "Kaymaz taban",
+    "Kesme halı",
+    "Makinede yıkanabilir",
+    "Sisal halı",
+    "Dekoratif halı",
   ];
 
   const prices = rugsData.map((r) => r.priceFrom);
@@ -214,6 +248,7 @@ export function getFilterOptions() {
 
   return {
     categories,
+    subcategories,
     sizes,
     colors,
     styles,
@@ -251,15 +286,21 @@ export function getFilteredRugs(params: RugFilterParams): RugProduct[] {
   }
 
   if (params.category && params.category !== "Tümü") {
-    if (params.category === "Yolluk") {
-      results = results.filter(
-        (r) =>
-          r.category === "Yolluk" ||
-          r.sizeOptions.some((s) => s.isRunner)
-      );
-    } else {
-      results = results.filter((r) => r.category === params.category);
-    }
+    results = results.filter(
+      (r) =>
+        r.category === params.category ||
+        (r.categories && r.categories.includes(params.category as RugCategory)) ||
+        (params.category === "Yolluk" && r.sizeOptions.some((s) => s.isRunner))
+    );
+  }
+
+  if (params.subcategory && params.subcategory !== "Tümü") {
+    results = results.filter(
+      (r) =>
+        r.subcategory === params.subcategory ||
+        (r.subcategories &&
+          r.subcategories.includes(params.subcategory as RugSubcategory))
+    );
   }
 
   if (params.size) {

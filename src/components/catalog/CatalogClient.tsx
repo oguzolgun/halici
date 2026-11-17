@@ -19,6 +19,7 @@ import { ProductCard } from "../ui/ProductCard";
 
 interface FilterOptionsData {
   categories: string[];
+  subcategories?: string[];
   sizes: string[];
   colors: string[];
   styles: string[];
@@ -79,6 +80,7 @@ export function CatalogClient({
     return {
       q: searchParams.get("q") ?? "",
       category: searchParams.get("kategori") ?? "",
+      subcategory: searchParams.get("altKategori") ?? "",
       size: searchParams.get("olcu") ?? "",
       color: searchParams.get("renk") ?? "",
       style: searchParams.get("stil") ?? "",
@@ -150,6 +152,12 @@ export function CatalogClient({
     activeChips.push({
       label: `Kategori: ${filters.category}`,
       onClear: () => updateParam({ kategori: undefined }),
+    });
+  }
+  if (filters.subcategory) {
+    activeChips.push({
+      label: `Alt Kategori: ${filters.subcategory}`,
+      onClear: () => updateParam({ altKategori: undefined }),
     });
   }
   if (filters.room) {
@@ -235,7 +243,7 @@ export function CatalogClient({
       </div>
 
       {/* Category */}
-      <FilterGroup title="Kategori">
+      <FilterGroup title="Ana Kategori">
         <div className="flex flex-wrap gap-1.5">
           {["Tümü", ...options.categories].map((cat) => {
             const active =
@@ -259,6 +267,38 @@ export function CatalogClient({
           })}
         </div>
       </FilterGroup>
+
+      {/* Subcategory */}
+      {options.subcategories && options.subcategories.length > 0 && (
+        <FilterGroup title="Alt Kategori & Özellik">
+          <div className="flex flex-wrap gap-1.5">
+            {["Tümü", ...options.subcategories].map((sub) => {
+              const active =
+                sub === "Tümü"
+                  ? !filters.subcategory
+                  : filters.subcategory === sub;
+              return (
+                <button
+                  key={sub}
+                  type="button"
+                  onClick={() =>
+                    updateParam({
+                      altKategori: sub === "Tümü" ? undefined : sub,
+                    })
+                  }
+                  className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors cursor-pointer ${
+                    active
+                      ? "border-navy bg-navy text-ivory"
+                      : "border-line bg-ivory-soft text-ink hover:border-navy/40"
+                  }`}
+                >
+                  {sub}
+                </button>
+              );
+            })}
+          </div>
+        </FilterGroup>
+      )}
 
       {/* Room */}
       <FilterGroup title="Oda">

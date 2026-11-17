@@ -2,7 +2,25 @@
  * Domain types for the Seç Halı catalog, filtering, cart, and mock checkout.
  */
 
-export type RugCategory = "Modern" | "Vintage" | "Çocuk" | "Doğal" | "Yolluk";
+export type RugCategory =
+  | "Mutfak halısı"
+  | "Banyo paspası"
+  | "Salon halısı"
+  | "Çocuk halısı"
+  | "Yatak odası halısı"
+  | "Yolluk"
+  | "Kilim"
+  | "Banyo takımı";
+
+export type RugSubcategory =
+  | "Outlet ürünler"
+  | "Vintage halı"
+  | "Koridor halısı"
+  | "Kaymaz taban"
+  | "Kesme halı"
+  | "Makinede yıkanabilir"
+  | "Sisal halı"
+  | "Dekoratif halı";
 
 export type RugStyle =
   | "Minimalist"
@@ -75,6 +93,9 @@ export interface RugProduct {
   priceFrom: number;
   tags: string[];
   category: RugCategory;
+  categories?: RugCategory[];
+  subcategory?: RugSubcategory;
+  subcategories?: RugSubcategory[];
   style: RugStyle;
   rooms: RugRoom[];
   material: RugMaterial;
@@ -97,6 +118,7 @@ export interface RugProduct {
 export interface RugFilterParams {
   q?: string;
   category?: string;
+  subcategory?: string;
   size?: string;
   color?: string;
   style?: string;
