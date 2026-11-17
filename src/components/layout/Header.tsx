@@ -414,10 +414,12 @@ export function Header() {
                     <li key={sub.href}>
                       <Link
                         href={sub.href}
-                        className="block rounded-lg px-2 py-1 text-xs text-ink/85 transition-colors hover:bg-sand/50 hover:text-navy"
+                        className="group block rounded-lg px-2 py-1 transition-colors hover:bg-sand/50"
                       >
-                        <span className="font-medium text-ink">{sub.label}</span>
-                        <span className="ml-1 text-[11px] text-stone">({sub.desc})</span>
+                        <span className="block text-xs font-semibold text-ink group-hover:text-navy truncate">
+                          {sub.label}
+                        </span>
+                        <p className="line-clamp-1 text-[11px] text-stone">{sub.desc}</p>
                       </Link>
                     </li>
                   ))}
@@ -512,9 +514,10 @@ export function Header() {
                       key={sub.href}
                       href={sub.href}
                       onClick={() => setMobileOpen(false)}
-                      className="rounded-lg border border-line/70 bg-ivory-soft px-2.5 py-1.5 text-xs text-ink/85 transition-colors hover:border-navy/40 hover:text-navy"
+                      className="group flex flex-col justify-between rounded-lg border border-line/70 bg-ivory-soft p-2 text-xs transition-colors hover:border-navy/40 hover:bg-sand/40"
                     >
-                      {sub.label}
+                      <span className="font-semibold text-ink group-hover:text-navy truncate">{sub.label}</span>
+                      <span className="mt-0.5 line-clamp-1 text-[10px] text-stone">{sub.desc}</span>
                     </Link>
                   ))}
                 </div>
@@ -530,9 +533,10 @@ export function Header() {
                       key={comb.href}
                       href={comb.href}
                       onClick={() => setMobileOpen(false)}
-                      className="rounded-lg border border-line/70 bg-sand/30 px-2.5 py-1.5 text-xs text-ink/85 transition-colors hover:border-navy/40 hover:text-navy"
+                      className="group flex flex-col justify-between rounded-lg border border-line/70 bg-sand/30 p-2 text-xs transition-colors hover:border-navy/40 hover:bg-sand/60"
                     >
-                      <span className="block font-medium truncate">{comb.label}</span>
+                      <span className="font-semibold text-ink group-hover:text-navy truncate">{comb.label}</span>
+                      <span className="mt-0.5 line-clamp-1 text-[10px] text-stone">{comb.desc}</span>
                     </Link>
                   ))}
                 </div>
