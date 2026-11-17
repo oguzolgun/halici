@@ -11,7 +11,10 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
-import { CollectionProductList } from "@/components/collection/CollectionProductList";
+import {
+  CollectionProductList,
+  type HierarchyChip,
+} from "@/components/collection/CollectionProductList";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -19,6 +22,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TrustBar } from "@/components/ui/TrustBar";
 import {
   getAllCollections,
+  getAvailableCategoriesForSubcategory,
+  getAvailableSubcategoriesForCategory,
   getCollectionBySlug,
   getRelatedCollections,
   getRugsForCollection,
@@ -91,6 +96,39 @@ export default async function CollectionDetailPage({
 
   const rugs = getRugsForCollection(collection);
   const related = getRelatedCollections(slug, 4);
+
+  const hierarchyChips: HierarchyChip[] =
+    collection.type === "kategori"
+      ? [
+          {
+            label: `Tüm ${collection.name}`,
+            slug: "all",
+            count: rugs.length,
+            href: `/koleksiyonlar/${collection.slug}`,
+            active: true,
+          },
+          ...getAvailableSubcategoriesForCategory(collection.slug).map((item) => ({
+            label: item.subcategory.name,
+            slug: item.subcategory.slug,
+            count: item.count,
+            href: `/koleksiyonlar/${collection.slug}/${item.subcategory.slug}`,
+          })),
+        ]
+      : [
+          {
+            label: `Tüm ${collection.name}`,
+            slug: "all",
+            count: rugs.length,
+            href: `/koleksiyonlar/${collection.slug}`,
+            active: true,
+          },
+          ...getAvailableCategoriesForSubcategory(collection.slug).map((item) => ({
+            label: item.category.name,
+            slug: item.category.slug,
+            count: item.count,
+            href: `/koleksiyonlar/${item.category.slug}/${collection.slug}`,
+          })),
+        ];
 
   // Structured Data: BreadcrumbList + FAQPage + ItemList
   const breadcrumbJsonLd = {
@@ -257,7 +295,11 @@ export default async function CollectionDetailPage({
               </p>
             </div>
 
-            <CollectionProductList collection={collection} rugs={rugs} />
+            <CollectionProductList
+              collection={collection}
+              rugs={rugs}
+              hierarchyChips={hierarchyChips}
+            />
           </Container>
         </section>
 

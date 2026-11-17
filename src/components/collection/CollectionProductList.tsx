@@ -2,14 +2,25 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, SlidersHorizontal } from "lucide-react";
+import { ArrowRight, SlidersHorizontal, Sparkles } from "lucide-react";
 import { ProductCard } from "@/components/ui/ProductCard";
 import type { CollectionItem } from "@/lib/collections";
 import type { RugProduct } from "@/types/rug";
 
+export interface HierarchyChip {
+  label: string;
+  slug: string;
+  count: number;
+  href: string;
+  active?: boolean;
+}
+
 interface CollectionProductListProps {
   collection: CollectionItem;
   rugs: RugProduct[];
+  hierarchyChips?: HierarchyChip[];
+  hierarchyTitle?: string;
+  activeSubSlug?: string;
 }
 
 type SortOption = "featured" | "price-asc" | "price-desc" | "rating" | "newest";
@@ -17,6 +28,9 @@ type SortOption = "featured" | "price-asc" | "price-desc" | "rating" | "newest";
 export function CollectionProductList({
   collection,
   rugs,
+  hierarchyChips = [],
+  hierarchyTitle,
+  activeSubSlug,
 }: CollectionProductListProps) {
   const [selectedSize, setSelectedSize] = useState<string>("Tümü");
   const [sortBy, setSortBy] = useState<SortOption>("featured");
@@ -27,7 +41,7 @@ export function CollectionProductList({
     rugs.forEach((r) => {
       r.sizes.forEach((s) => set.add(s));
     });
-    // Sort according to standard order
+    // Standard order
     const order = [
       "80x150",
       "80x300",
@@ -84,6 +98,54 @@ export function CollectionProductList({
 
   return (
     <div className="space-y-6">
+      {/* WRG Home Style: Subcategory / Hierarchy Tabs */}
+      {hierarchyChips.length > 0 && (
+        <div className="rounded-2xl border border-line bg-sand/35 p-4 sm:p-5 space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-terracotta-deep" aria-hidden="true" />
+              <p className="text-xs font-semibold uppercase tracking-wider text-navy">
+                {hierarchyTitle ||
+                  (collection.type === "kategori"
+                    ? `${collection.name} Alt Kategorileri & Özellikler`
+                    : `${collection.name} Bulunan Alanlar & Odalar`)}
+              </p>
+            </div>
+            <span className="text-[11px] text-stone">
+              {hierarchyChips.length} Seçenek
+            </span>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            {hierarchyChips.map((chip) => {
+              const isActive = chip.active || chip.slug === activeSubSlug;
+              return (
+                <Link
+                  key={chip.slug}
+                  href={chip.href}
+                  className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-medium transition-all ${
+                    isActive
+                      ? "bg-navy text-ivory shadow-xs font-semibold"
+                      : "border border-line/80 bg-ivory text-ink/85 hover:border-navy/40 hover:bg-sand/60 hover:text-navy"
+                  }`}
+                >
+                  <span>{chip.label}</span>
+                  <span
+                    className={`rounded-full px-1.5 py-0.2 text-[10px] tabular-nums ${
+                      isActive
+                        ? "bg-ivory/20 text-ivory"
+                        : "bg-sand/70 text-stone"
+                    }`}
+                  >
+                    {chip.count}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Control bar: Size Pills + Sort Dropdown */}
       <div className="flex flex-col gap-4 border-b border-line pb-5 sm:flex-row sm:items-center sm:justify-between">
         {/* Size Pills */}
@@ -121,7 +183,7 @@ export function CollectionProductList({
         {/* Sort & Model Counter */}
         <div className="flex items-center justify-between gap-3 sm:justify-end">
           <span className="text-xs text-stone">
-            <strong className="font-semibold text-ink">{sortedRugs.length}</strong> model
+            <strong className="font-semibold text-ink">{sortedRugs.length}</strong> model listeleniyor
           </span>
 
           <label className="flex items-center gap-2 text-xs text-stone">
@@ -130,7 +192,7 @@ export function CollectionProductList({
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
               aria-label="Ürün sıralama"
-              className="rounded-lg border border-line bg-ivory px-2.5 py-1.5 text-xs font-medium text-ink focus:border-navy focus:outline-none"
+              className="rounded-lg border border-line bg-ivory px-2.5 py-1.5 text-xs font-medium text-ink focus:border-navy focus:outline-none cursor-pointer"
             >
               <option value="featured">Öne Çıkanlar</option>
               <option value="price-asc">Fiyat: Düşükten Yükseğe</option>

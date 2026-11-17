@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
-import { getAllCollections } from "@/lib/collections";
+import { getAllCollections, getAllNestedPairs } from "@/lib/collections";
 import { getAllRugs } from "@/lib/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://sechali.com.tr";
   const rugs = getAllRugs();
   const collections = getAllCollections();
+  const nestedPairs = getAllNestedPairs();
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -53,6 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const nestedRoutes: MetadataRoute.Sitemap = nestedPairs.map((pair) => ({
+    url: `${baseUrl}/koleksiyonlar/${pair.categorySlug}/${pair.subcategorySlug}`,
+    lastModified: new Date("2026-11-17"),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
   const productRoutes: MetadataRoute.Sitemap = rugs.map((rug) => ({
     url: `${baseUrl}/halilar/${rug.slug}`,
     lastModified: new Date("2026-11-11"),
@@ -60,5 +68,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...collectionRoutes, ...productRoutes];
+  return [
+    ...staticRoutes,
+    ...collectionRoutes,
+    ...nestedRoutes,
+    ...productRoutes,
+  ];
 }

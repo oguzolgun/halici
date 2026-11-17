@@ -695,6 +695,155 @@ export function getRugsForCollection(item: CollectionItem): RugProduct[] {
   );
 }
 
+export function getCategoryCollections(): CollectionItem[] {
+  return COLLECTIONS_DATA.filter((c) => c.type === "kategori");
+}
+
+export function getSubcategoryCollections(): CollectionItem[] {
+  return COLLECTIONS_DATA.filter((c) => c.type === "altKategori");
+}
+
+export function getAvailableSubcategoriesForCategory(catSlug: string): Array<{
+  subcategory: CollectionItem;
+  count: number;
+}> {
+  const category = getCollectionBySlug(catSlug);
+  if (!category || category.type !== "kategori") return [];
+
+  const subcategories = getSubcategoryCollections();
+  return subcategories
+    .map((sub) => {
+      const rugs = getRugsForCategoryAndSubcategory(category.slug, sub.slug);
+      return { subcategory: sub, count: rugs.length };
+    })
+    .filter((item) => item.count > 0);
+}
+
+export function getAvailableCategoriesForSubcategory(subSlug: string): Array<{
+  category: CollectionItem;
+  count: number;
+}> {
+  const subcategory = getCollectionBySlug(subSlug);
+  if (!subcategory || subcategory.type !== "altKategori") return [];
+
+  const categories = getCategoryCollections();
+  return categories
+    .map((cat) => {
+      const rugs = getRugsForCategoryAndSubcategory(cat.slug, subcategory.slug);
+      return { category: cat, count: rugs.length };
+    })
+    .filter((item) => item.count > 0);
+}
+
+export function getRugsForCategoryAndSubcategory(
+  catSlug: string,
+  subSlug: string
+): RugProduct[] {
+  const category = getCollectionBySlug(catSlug);
+  const subcategory = getCollectionBySlug(subSlug);
+  if (!category || !subcategory) return [];
+
+  const all = getAllRugs();
+  return all.filter((r) => {
+    const matchCat =
+      r.category === category.targetName ||
+      (r.categories &&
+        r.categories.includes(category.targetName as RugCategory)) ||
+      (category.targetName === "Yolluk" &&
+        r.sizeOptions.some((s) => s.isRunner));
+
+    const matchSub =
+      r.subcategory === subcategory.targetName ||
+      (r.subcategories &&
+        r.subcategories.includes(subcategory.targetName as RugSubcategory));
+
+    return matchCat && matchSub;
+  });
+}
+
+export interface NestedCollectionData {
+  category: CollectionItem;
+  subcategory: CollectionItem;
+  name: string;
+  h1: string;
+  metaTitle: string;
+  metaDescription: string;
+  intro: string;
+  image: string;
+  rugs: RugProduct[];
+  faqs: CollectionFAQ[];
+}
+
+export function getNestedCollectionData(
+  catSlug: string,
+  subSlug: string
+): NestedCollectionData | undefined {
+  const category = getCollectionBySlug(catSlug);
+  const subcategory = getCollectionBySlug(subSlug);
+  if (!category || !subcategory) return undefined;
+
+  const rugs = getRugsForCategoryAndSubcategory(catSlug, subSlug);
+  if (rugs.length === 0) return undefined;
+
+  const name = `${subcategory.name} ${category.name}`;
+  const h1 = `${subcategory.name} ${category.name} Modelleri ve Fiyatları`;
+  const metaTitle = `${subcategory.name} ${category.name} Modelleri | Seç Halı`;
+  const metaDescription = `${category.name} için ${subcategory.name.toLowerCase()} modelleri Seç Halı'da. Farklı ölçü seçenekleri, ücretsiz kargo ve peşin fiyatına taksit avantajıyla keşfedin.`;
+  const intro = `${category.name} alanınızda hem ${subcategory.name.toLowerCase()} konforunu hem de estetik zarafeti bir arada arayanlar için hazırlanan özel seri. ${category.shortDesc} avantajını ${subcategory.shortDesc.toLowerCase()} özelliğiyle birleştirir.`;
+  const image = rugs[0]?.image || category.image;
+
+  const faqs: CollectionFAQ[] = [
+    {
+      question: `${category.name} alanında ${subcategory.name.toLowerCase()} kullanımı avantajlı mıdır?`,
+      answer: `Evet. ${category.name} kullanım temposuna göre özel olarak seçilen bu serilerde ${subcategory.name.toLowerCase()} özelliği hem uzun ömürlü kullanım hem de maksimum zemin konforu sağlar.`,
+    },
+    {
+      question: `Bu seride hangi ölçüler mevcuttur?`,
+      answer: `80x150 cm'den 200x290 cm'ye kadar ${category.name} alanınızın metrekaresine uygun standart ve rulo kesim ebatlar bulunmaktadır.`,
+    },
+    {
+      question: `Temizlik ve bakım nasıl yapılmalıdır?`,
+      answer: `Haftalık fırçasız başlıkla süpürme ve leke oluştuğunda ılık nemli bezle tampon yapılması tavsiye edilir. Yıkanabilir modeller 30 derecede narin programda yıkanabilir.`,
+    },
+  ];
+
+  return {
+    category,
+    subcategory,
+    name,
+    h1,
+    metaTitle,
+    metaDescription,
+    intro,
+    image,
+    rugs,
+    faqs,
+  };
+}
+
+export function getAllNestedPairs(): Array<{
+  categorySlug: string;
+  subcategorySlug: string;
+}> {
+  const categories = getCategoryCollections();
+  const subcategories = getSubcategoryCollections();
+  const pairs: Array<{ categorySlug: string; subcategorySlug: string }> = [];
+
+  for (const cat of categories) {
+    for (const sub of subcategories) {
+      const rugs = getRugsForCategoryAndSubcategory(cat.slug, sub.slug);
+      if (rugs.length > 0) {
+        pairs.push({
+          categorySlug: cat.slug,
+          subcategorySlug: sub.slug,
+        });
+      }
+    }
+  }
+
+  return pairs;
+}
+
 export function getRelatedCollections(currentSlug: string, limit = 4): CollectionItem[] {
   const current = getCollectionBySlug(currentSlug);
   if (!current) return COLLECTIONS_DATA.slice(0, limit);

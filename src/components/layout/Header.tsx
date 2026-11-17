@@ -43,6 +43,15 @@ const MEGA_SUB_CATEGORIES = [
   { label: "Dekoratif Halı", href: "/koleksiyonlar/dekoratif-hali", desc: "Modern tasarım vurguları" },
 ];
 
+const MEGA_COMBINATIONS = [
+  { label: "Yıkanabilir Salon Halısı", href: "/koleksiyonlar/salon-halisi/makinede-yikanabilir", desc: "Pratik temizlik & zarafet" },
+  { label: "Kaymaz Taban Mutfak Halısı", href: "/koleksiyonlar/mutfak-halisi/kaymaz-taban", desc: "Fayansa sabitlenen konfor" },
+  { label: "Kesme Rulo Yolluk", href: "/koleksiyonlar/yolluk/kesme-hali", desc: "Santimine göre özel boy" },
+  { label: "Vintage Salon Halısı", href: "/koleksiyonlar/salon-halisi/vintage-hali", desc: "Anadolu madalyon esintisi" },
+  { label: "Yıkanabilir Koridor Yolluk", href: "/koleksiyonlar/yolluk/makinede-yikanabilir", desc: "30°C yıkanabilir pratiklik" },
+  { label: "Yıkanabilir Çocuk Halısı", href: "/koleksiyonlar/cocuk-halisi/makinede-yikanabilir", desc: "Antialerjik & leke tutmaz" },
+];
+
 const MEGA_SIZES = [
   { label: "80x150 cm", href: "/halilar?olcu=80x150" },
   { label: "80x300 cm (Yolluk)", href: "/halilar?olcu=80x300" },
@@ -377,7 +386,7 @@ export function Header() {
             <Container className="grid grid-cols-12 gap-8 py-8">
               <div className="col-span-4 space-y-3 border-r border-line pr-6">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
-                  Ana Kategoriler
+                  Odaya & Alana Göre
                 </p>
                 <ul className="grid grid-cols-2 gap-x-2 gap-y-1">
                   {MEGA_MAIN_CATEGORIES.map((cat) => (
@@ -398,7 +407,7 @@ export function Header() {
 
               <div className="col-span-3 space-y-3 border-r border-line pr-6">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
-                  Alt Kategoriler
+                  Özellik & Çözümlere Göre
                 </p>
                 <ul className="space-y-1">
                   {MEGA_SUB_CATEGORIES.map((sub) => (
@@ -409,6 +418,27 @@ export function Header() {
                       >
                         <span className="font-medium text-ink">{sub.label}</span>
                         <span className="ml-1 text-[11px] text-stone">({sub.desc})</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="col-span-3 space-y-3 border-r border-line pr-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
+                  Popüler Kombinasyonlar
+                </p>
+                <ul className="space-y-1">
+                  {MEGA_COMBINATIONS.map((comb) => (
+                    <li key={comb.href}>
+                      <Link
+                        href={comb.href}
+                        className="group block rounded-lg px-2 py-1 transition-colors hover:bg-sand/50"
+                      >
+                        <span className="block text-xs font-semibold text-ink group-hover:text-navy truncate">
+                          {comb.label}
+                        </span>
+                        <p className="line-clamp-1 text-[11px] text-stone">{comb.desc}</p>
                       </Link>
                     </li>
                   ))}
@@ -431,33 +461,6 @@ export function Header() {
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              {/* Featured editorial spotlight */}
-              <div className="col-span-3">
-                <Link
-                  href="/halilar/anadolu-geometrik-kilim"
-                  className="group flex flex-col overflow-hidden rounded-[14px] border border-line bg-sand/40 p-3 transition-shadow hover:shadow-md"
-                >
-                  <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[10px]">
-                    <Image
-                      src="/rugs/rug-05.jpg"
-                      alt="Anadolu Geometrik Kilim"
-                      fill
-                      sizes="280px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-terracotta-deep">
-                    Editörün Seçimi
-                  </p>
-                  <p className="mt-0.5 font-editorial text-base text-ink">
-                    Anadolu Geometrik Kilim
-                  </p>
-                  <p className="text-xs text-stone-on-sand">
-                    {formatTRY(2950)}&apos;den başlayan fiyatlarla →
-                  </p>
-                </Link>
               </div>
             </Container>
           </div>
@@ -512,6 +515,24 @@ export function Header() {
                       className="rounded-lg border border-line/70 bg-ivory-soft px-2.5 py-1.5 text-xs text-ink/85 transition-colors hover:border-navy/40 hover:text-navy"
                     >
                       {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="border-t border-line pt-3">
+                <p className="px-1 pb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
+                  Öne Çıkan Kombinasyonlar
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  {MEGA_COMBINATIONS.map((comb) => (
+                    <Link
+                      key={comb.href}
+                      href={comb.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="rounded-lg border border-line/70 bg-sand/30 px-2.5 py-1.5 text-xs text-ink/85 transition-colors hover:border-navy/40 hover:text-navy"
+                    >
+                      <span className="block font-medium truncate">{comb.label}</span>
                     </Link>
                   ))}
                 </div>
