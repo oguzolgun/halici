@@ -9,6 +9,17 @@ interface CategoryGridProps {
   categories: CategorySummary[];
 }
 
+const CATEGORY_SLUG_MAP: Record<string, string> = {
+  "Mutfak halısı": "mutfak-halisi",
+  "Banyo paspası": "banyo-paspasi",
+  "Salon halısı": "salon-halisi",
+  "Çocuk halısı": "cocuk-halisi",
+  "Yatak odası halısı": "yatak-odasi-halisi",
+  "Yolluk": "yolluk",
+  "Kilim": "kilim",
+  "Banyo takımı": "banyo-takimi",
+};
+
 export function CategoryGrid({ categories }: CategoryGridProps) {
   return (
     <section id="koleksiyonlar" className="border-b border-line bg-sand/30 py-16 sm:py-20">
@@ -25,7 +36,7 @@ export function CategoryGrid({ categories }: CategoryGridProps) {
           {categories.map((cat) => (
             <Link
               key={cat.slug}
-              href={`/halilar?kategori=${encodeURIComponent(cat.slug)}`}
+              href={`/koleksiyonlar/${CATEGORY_SLUG_MAP[cat.slug] || "salon-halisi"}`}
               className="group relative flex flex-col justify-between overflow-hidden rounded-[14px] border border-line bg-sand/65 p-3.5 sm:p-5 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:bg-sand hover:shadow-[var(--shadow-elevated)]"
             >
               <div>

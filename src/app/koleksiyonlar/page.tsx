@@ -25,6 +25,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "/koleksiyonlar" },
 };
 
+const CATEGORY_SLUG_MAP: Record<string, string> = {
+  "Mutfak halısı": "mutfak-halisi",
+  "Banyo paspası": "banyo-paspasi",
+  "Salon halısı": "salon-halisi",
+  "Çocuk halısı": "cocuk-halisi",
+  "Yatak odası halısı": "yatak-odasi-halisi",
+  "Yolluk": "yolluk",
+  "Kilim": "kilim",
+  "Banyo takımı": "banyo-takimi",
+  "Outlet ürünler": "outlet-urunler",
+  "Vintage halı": "vintage-hali",
+  "Koridor halısı": "koridor-halisi",
+  "Kaymaz taban": "kaymaz-taban",
+  "Kesme halı": "kesme-hali",
+  "Makinede yıkanabilir": "makinede-yikanabilir",
+  "Sisal halı": "sisal-hali",
+  "Dekoratif halı": "dekoratif-hali",
+};
+
 const SUB_CATEGORIES_DATA = [
   {
     title: "Outlet Ürünler",
@@ -115,7 +134,7 @@ export default function CollectionsPage() {
             {categories.map((cat) => (
               <Link
                 key={cat.slug}
-                href={`/halilar?kategori=${encodeURIComponent(cat.slug)}`}
+                href={`/koleksiyonlar/${CATEGORY_SLUG_MAP[cat.slug] || "salon-halisi"}`}
                 className="group relative flex flex-col justify-between overflow-hidden rounded-[14px] border border-line bg-sand/40 p-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:bg-sand/70 hover:shadow-[var(--shadow-elevated)] sm:p-5"
               >
                 <div>
@@ -171,7 +190,7 @@ export default function CollectionsPage() {
               return (
                 <Link
                   key={sub.slug}
-                  href={`/halilar?altKategori=${encodeURIComponent(sub.slug)}`}
+                  href={`/koleksiyonlar/${CATEGORY_SLUG_MAP[sub.slug] || "vintage-hali"}`}
                   className="group flex flex-col justify-between rounded-[14px] border border-line bg-ivory-soft p-5 transition-all duration-300 hover:-translate-y-1 hover:border-navy/40 hover:shadow-md"
                 >
                   <div>

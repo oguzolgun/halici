@@ -22,25 +22,25 @@ import type { RugProduct } from "@/types/rug";
 import { Container } from "../ui/Container";
 
 const MEGA_MAIN_CATEGORIES = [
-  { label: "Mutfak Halısı", href: "/halilar?kategori=Mutfak+hal%C4%B1s%C4%B1", desc: "Leke tutmaz, pratik dokuma" },
-  { label: "Banyo Paspası", href: "/halilar?kategori=Banyo+paspas%C4%B1", desc: "Hızlı kuruyan, yumuşak doku" },
-  { label: "Salon Halısı", href: "/halilar?kategori=Salon+hal%C4%B1s%C4%B1", desc: "Zengin desen ve mimari dokular" },
-  { label: "Çocuk Halısı", href: "/halilar?kategori=%C3%87ocuk+hal%C4%B1s%C4%B1", desc: "Antialerjik ve güvenli modeller" },
-  { label: "Yatak Odası Halısı", href: "/halilar?kategori=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1", desc: "Sıcak ve konforlu zemin hissi" },
-  { label: "Yolluk", href: "/halilar?kategori=Yolluk", desc: "Antre ve koridorlar için şıklık" },
-  { label: "Kilim", href: "/halilar?kategori=Kilim", desc: "Doğal iplik, çift taraflı dokuma" },
-  { label: "Banyo Takımı", href: "/halilar?kategori=Banyo+tak%C4%B1m%C4%B1", desc: "Set konsepti & kaymaz taban" },
+  { label: "Mutfak Halısı", href: "/koleksiyonlar/mutfak-halisi", desc: "Leke tutmaz, pratik dokuma" },
+  { label: "Banyo Paspası", href: "/koleksiyonlar/banyo-paspasi", desc: "Hızlı kuruyan, yumuşak doku" },
+  { label: "Salon Halısı", href: "/koleksiyonlar/salon-halisi", desc: "Zengin desen ve mimari dokular" },
+  { label: "Çocuk Halısı", href: "/koleksiyonlar/cocuk-halisi", desc: "Antialerjik ve güvenli modeller" },
+  { label: "Yatak Odası Halısı", href: "/koleksiyonlar/yatak-odasi-halisi", desc: "Sıcak ve konforlu zemin hissi" },
+  { label: "Yolluk", href: "/koleksiyonlar/yolluk", desc: "Antre ve koridorlar için şıklık" },
+  { label: "Kilim", href: "/koleksiyonlar/kilim", desc: "Doğal iplik, çift taraflı dokuma" },
+  { label: "Banyo Takımı", href: "/koleksiyonlar/banyo-takimi", desc: "Set konsepti & kaymaz taban" },
 ];
 
 const MEGA_SUB_CATEGORIES = [
-  { label: "Outlet Ürünler", href: "/halilar?altKategori=Outlet+%C3%BCr%C3%BCnler", desc: "Fırsat fiyatlı özel seriler" },
-  { label: "Vintage Halı", href: "/halilar?altKategori=Vintage+hal%C4%B1", desc: "Eskitme ve klasik miras" },
-  { label: "Koridor Halısı", href: "/halilar?altKategori=Koridor+hal%C4%B1s%C4%B1", desc: "Geçiş alanları için kesimler" },
-  { label: "Kaymaz Taban", href: "/halilar?altKategori=Kaymaz+taban", desc: "Güvenli ve sabit zemin" },
-  { label: "Kesme Halı", href: "/halilar?altKategori=Kesme+hal%C4%B1", desc: "İstediğiniz ölçüde rulo kesim" },
-  { label: "Makinede Yıkanabilir", href: "/halilar?altKategori=Makinede+y%C4%B1kanabilir", desc: "Kolay temizlik ve hijyen" },
-  { label: "Sisal Halı", href: "/halilar?altKategori=Sisal+hal%C4%B1", desc: "Doğal bitki lifleri ve jüt" },
-  { label: "Dekoratif Halı", href: "/halilar?altKategori=Dekoratif+hal%C4%B1", desc: "Modern tasarım vurguları" },
+  { label: "Outlet Ürünler", href: "/koleksiyonlar/outlet-urunler", desc: "Fırsat fiyatlı özel seriler" },
+  { label: "Vintage Halı", href: "/koleksiyonlar/vintage-hali", desc: "Eskitme ve klasik miras" },
+  { label: "Koridor Halısı", href: "/koleksiyonlar/koridor-halisi", desc: "Geçiş alanları için kesimler" },
+  { label: "Kaymaz Taban", href: "/koleksiyonlar/kaymaz-taban", desc: "Güvenli ve sabit zemin" },
+  { label: "Kesme Halı", href: "/koleksiyonlar/kesme-hali", desc: "İstediğiniz ölçüde rulo kesim" },
+  { label: "Makinede Yıkanabilir", href: "/koleksiyonlar/makinede-yikanabilir", desc: "Kolay temizlik ve hijyen" },
+  { label: "Sisal Halı", href: "/koleksiyonlar/sisal-hali", desc: "Doğal bitki lifleri ve jüt" },
+  { label: "Dekoratif Halı", href: "/koleksiyonlar/dekoratif-hali", desc: "Modern tasarım vurguları" },
 ];
 
 const MEGA_SIZES = [

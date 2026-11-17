@@ -28,7 +28,7 @@ const ROOM_GUIDES = [
     recommendation: "160x230 cm veya 200x290 cm",
     tip: "Koltukların ön ayaklarının halının üzerine 15–20 cm basması mekana bütünlük kazandırır.",
     material: "Yün, pamuk veya kabartma dokulu eskitme seriler.",
-    href: "/halilar?kategori=Salon+hal%C4%B1s%C4%B1",
+    href: "/koleksiyonlar/salon-halisi",
   },
   {
     room: "Mutfak",
@@ -36,7 +36,7 @@ const ROOM_GUIDES = [
     recommendation: "80x150 cm, 100x200 cm veya Kesme Rulo",
     tip: "Yemek dökülmelerine karşı silinebilir, leke tutmayan ve kaymaz tabanlı modeller tercih edilmelidir.",
     material: "Düz dokuma, silinebilir jüt veya yıkanabilir şönil.",
-    href: "/halilar?kategori=Mutfak+hal%C4%B1s%C4%B1",
+    href: "/koleksiyonlar/mutfak-halisi",
   },
   {
     room: "Banyo & Islak Hacimler",
@@ -44,7 +44,7 @@ const ROOM_GUIDES = [
     recommendation: "Banyo Paspası & Takımı Setleri",
     tip: "Fayans üzerinde kaymayan jel/lateks taban ve hızlı kuruyan hav yapısı hayati önem taşır.",
     material: "Mikrofiber, organik pamuk, makinede yıkanabilir taban.",
-    href: "/halilar?kategori=Banyo+paspas%C4%B1",
+    href: "/koleksiyonlar/banyo-paspasi",
   },
   {
     room: "Yatak Odası",
@@ -52,7 +52,7 @@ const ROOM_GUIDES = [
     recommendation: "Yatak kenarlarına 80x150 cm veya ayak ucuna 120x180 cm",
     tip: "Sabah yataktan kalktığınızda ayağınızın sıcak bir dokuya basması güne huzurlu başlamanızı sağlar.",
     material: "Yüksek havlı yumuşak dokuma veya doğal yün.",
-    href: "/halilar?kategori=Yatak+odas%C4%B1+hal%C4%B1s%C4%B1",
+    href: "/koleksiyonlar/yatak-odasi-halisi",
   },
   {
     room: "Çocuk Odası",
@@ -60,7 +60,7 @@ const ROOM_GUIDES = [
     recommendation: "120x180 cm veya 160x230 cm",
     tip: "Toz tutmayan, hav dökmeyen OEKO-TEX sertifikalı yıkanabilir ürünler çocuk sağlığı için idealdir.",
     material: "Organik pamuk, antialerjik yüzey, kaymaz taban.",
-    href: "/halilar?kategori=%C3%87ocuk+hal%C4%B1s%C4%B1",
+    href: "/koleksiyonlar/cocuk-halisi",
   },
   {
     room: "Koridor & Antre",
@@ -68,7 +68,7 @@ const ROOM_GUIDES = [
     recommendation: "80x150 cm veya 80x300 cm (Yolluk)",
     tip: "Kapı altlarının sürtünmemesi için hav yüksekliği 7–10 mm aralığında tutulmalıdır.",
     material: "Sıkı dokunmuş yolluk, kilim veya kesme rulo halı.",
-    href: "/halilar?kategori=Yolluk",
+    href: "/koleksiyonlar/yolluk",
   },
 ];
 
@@ -224,7 +224,7 @@ export default function GuidePage() {
               <p className="text-xs text-stone leading-relaxed">
                 Fayans, granit ve laminat parkelerde halının toplanmasını ve kaymasını engeller. Özellikle banyo ve koridorlarda güvenlik sağlar.
               </p>
-              <Link href="/halilar?altKategori=Kaymaz+taban" className="inline-block pt-1 text-xs font-semibold text-navy hover:underline">
+              <Link href="/koleksiyonlar/kaymaz-taban" className="inline-block pt-1 text-xs font-semibold text-navy hover:underline">
                 Kaymaz Halıları Gör →
               </Link>
             </div>
@@ -237,7 +237,7 @@ export default function GuidePage() {
               <p className="text-xs text-stone leading-relaxed">
                 Evcil hayvanlı ve çocuklu aileler için 30 derecede kolayca makinede yıkanabilen, hijyenik ve pratik temizlik avantajı.
               </p>
-              <Link href="/halilar?altKategori=Makinede+y%C4%B1kanabilir" className="inline-block pt-1 text-xs font-semibold text-navy hover:underline">
+              <Link href="/koleksiyonlar/makinede-yikanabilir" className="inline-block pt-1 text-xs font-semibold text-navy hover:underline">
                 Yıkanabilir Modeller →
               </Link>
             </div>
@@ -250,7 +250,7 @@ export default function GuidePage() {
               <p className="text-xs text-stone leading-relaxed">
                 Doğal bitkisel liflerden dokunur. Statik elektrik üretmez, tozu içine hapsetmez ve bohem/doğal bir zemin sıcaklığı verir.
               </p>
-              <Link href="/halilar?altKategori=Sisal+hal%C4%B1" className="inline-block pt-1 text-xs font-semibold text-navy hover:underline">
+              <Link href="/koleksiyonlar/sisal-hali" className="inline-block pt-1 text-xs font-semibold text-navy hover:underline">
                 Jüt & Sisal Halılar →
               </Link>
             </div>
@@ -263,7 +263,7 @@ export default function GuidePage() {
               <p className="text-xs text-stone leading-relaxed">
                 Geleneksel Türk motiflerinin modern soluk renklerle yeniden yorumlanması. Klasik ile çağdaş mobilyaları mükemmel dengeler.
               </p>
-              <Link href="/halilar?altKategori=Vintage+hal%C4%B1" className="inline-block pt-1 text-xs font-semibold text-navy hover:underline">
+              <Link href="/koleksiyonlar/vintage-hali" className="inline-block pt-1 text-xs font-semibold text-navy hover:underline">
                 Vintage Koleksiyonu →
               </Link>
             </div>
