@@ -106,8 +106,8 @@ export function getRugBySlug(slug: string): RugProduct | undefined {
  * Returns bestselling rugs sorted by rating and review count.
  */
 export function getBestsellers(limit = 8): RugProduct[] {
-  return [...rugsData]
-    .sort((a, b) => {
+  return rugsData
+    .toSorted((a, b) => {
       if (a.bestseller !== b.bestseller) return a.bestseller ? -1 : 1;
       return b.reviewCount - a.reviewCount;
     })
@@ -209,7 +209,7 @@ export function getCategoriesSummary(): CategorySummary[] {
 export function getFilterOptions() {
   const sizes = Array.from(
     new Set(rugsData.flatMap((r) => r.sizes))
-  ).sort();
+  ).toSorted();
   const colors = Array.from(
     new Set(rugsData.map((r) => r.colorFamily))
   );
@@ -346,27 +346,22 @@ export function getFilteredRugs(params: RugFilterParams): RugProduct[] {
 
   switch (params.sort) {
     case "price-asc":
-      results.sort((a, b) => a.priceFrom - b.priceFrom);
-      break;
+      return results.toSorted((a, b) => a.priceFrom - b.priceFrom);
     case "price-desc":
-      results.sort((a, b) => b.priceFrom - a.priceFrom);
-      break;
+      return results.toSorted((a, b) => b.priceFrom - a.priceFrom);
     case "rating":
-      results.sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
-      break;
+      return results.toSorted(
+        (a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount
+      );
     case "newest":
-      results.sort((a, b) => (a.isNew === b.isNew ? 0 : a.isNew ? -1 : 1));
-      break;
+      return results.toSorted((a, b) => (a.isNew === b.isNew ? 0 : a.isNew ? -1 : 1));
     case "featured":
     default:
-      results.sort((a, b) => {
+      return results.toSorted((a, b) => {
         if (a.bestseller !== b.bestseller) return a.bestseller ? -1 : 1;
         return b.reviewCount - a.reviewCount;
       });
-      break;
   }
-
-  return results;
 }
 
 /**

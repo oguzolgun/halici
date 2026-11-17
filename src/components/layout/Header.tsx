@@ -135,8 +135,8 @@ export function Header() {
     if (!catalogCache) return [];
     const trimmed = searchQuery.trim();
     if (!trimmed) {
-      return [...catalogCache]
-        .sort((a, b) =>
+      return catalogCache
+        .toSorted((a, b) =>
           a.bestseller !== b.bestseller
             ? a.bestseller
               ? -1
@@ -470,7 +470,7 @@ export function Header() {
 
         {/* Mobile Drawer Navigation */}
         {mobileOpen && (
-          <div className="overflow-hidden border-t border-line bg-ivory lg:hidden">
+          <div className="overflow-hidden border-t border-line bg-ivory lg:hidden overscroll-contain">
             <Container className="space-y-5 py-6">
               <div>
                 <div className="flex items-center justify-between pb-2">
@@ -582,12 +582,12 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Halı arama penceresi"
-          className="fixed inset-0 z-50 flex items-start justify-center bg-ink/40 px-4 pt-20 backdrop-blur-xs"
+          className="fixed inset-0 z-50 flex items-start justify-center bg-ink/40 px-4 pt-20 backdrop-blur-xs overscroll-contain"
           onClick={() => setSearchOpen(false)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-2xl overflow-hidden rounded-[14px] border border-line bg-ivory shadow-[0_24px_60px_rgba(20,33,58,0.22)]"
+            className="w-full max-w-2xl overflow-hidden rounded-[14px] border border-line bg-ivory shadow-[0_24px_60px_rgba(20,33,58,0.22)] overscroll-contain"
           >
               <form
                 onSubmit={handleSearchSubmit}
@@ -613,7 +613,7 @@ export function Header() {
                 </button>
               </form>
 
-              <div className="max-h-[60vh] overflow-y-auto p-4">
+              <div className="max-h-[60vh] overflow-y-auto p-4 overscroll-contain">
                 <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-stone">
                   {searchQuery.trim()
                     ? `"${searchQuery}" için sonuçlar`
@@ -683,12 +683,12 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Hesabım ve favoriler"
-          className="fixed inset-0 z-50 flex justify-end bg-ink/40 backdrop-blur-xs"
+          className="fixed inset-0 z-50 flex justify-end bg-ink/40 backdrop-blur-xs overscroll-contain"
           onClick={() => setAccountOpen(false)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex h-full w-full max-w-md flex-col border-l border-line bg-ivory p-6 shadow-2xl"
+            className="flex h-full w-full max-w-md flex-col border-l border-line bg-ivory p-6 shadow-2xl overscroll-contain"
           >
               <div className="flex items-center justify-between border-b border-line pb-4">
                 <div>
@@ -709,7 +709,7 @@ export function Header() {
                 </button>
               </div>
 
-              <div className="mt-5 flex-1 overflow-y-auto space-y-6">
+              <div className="mt-5 flex-1 overflow-y-auto space-y-6 overscroll-contain">
                 <div className="rounded-[14px] border border-line bg-sand/40 p-4">
                   <p className="text-sm font-semibold text-ink">
                     Misafir Alışveriş Deneyimi

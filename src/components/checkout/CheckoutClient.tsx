@@ -207,21 +207,29 @@ export function CheckoutClient() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <InputField
                   id="fullName"
+                  name="name"
+                  autoComplete="name"
                   label="Ad Soyad *"
+                  required
                   value={address.fullName}
                   onChange={(v) => setAddress({ ...address, fullName: v })}
                   placeholder="Örn: Elif Demir"
                 />
                 <InputField
                   id="phone"
+                  name="tel"
+                  autoComplete="tel"
                   label="Telefon Numarası *"
                   type="tel"
+                  required
                   value={address.phone}
                   onChange={(v) => setAddress({ ...address, phone: v })}
                   placeholder="05XX XXX XX XX"
                 />
                 <InputField
                   id="email"
+                  name="email"
+                  autoComplete="email"
                   label="E-posta Adresi"
                   type="email"
                   value={address.email}
@@ -237,6 +245,8 @@ export function CheckoutClient() {
                   </label>
                   <select
                     id="city"
+                    name="address-level1"
+                    autoComplete="address-level1"
                     value={address.city}
                     onChange={(e) =>
                       setAddress({ ...address, city: e.target.value })
@@ -254,6 +264,8 @@ export function CheckoutClient() {
                 </div>
                 <InputField
                   id="district"
+                  name="address-level2"
+                  autoComplete="address-level2"
                   label="İlçe"
                   value={address.district}
                   onChange={(v) => setAddress({ ...address, district: v })}
@@ -268,6 +280,10 @@ export function CheckoutClient() {
                   </label>
                   <textarea
                     id="street"
+                    name="street-address"
+                    autoComplete="street-address"
+                    required
+                    aria-required="true"
                     rows={3}
                     value={address.street}
                     onChange={(e) =>
@@ -521,6 +537,9 @@ function InputField({
   onChange,
   placeholder,
   type = "text",
+  name,
+  autoComplete,
+  required,
 }: {
   id: string;
   label: string;
@@ -528,6 +547,9 @@ function InputField({
   onChange: (value: string) => void;
   placeholder?: string;
   type?: string;
+  name?: string;
+  autoComplete?: string;
+  required?: boolean;
 }) {
   return (
     <div>
@@ -536,10 +558,14 @@ function InputField({
       </label>
       <input
         id={id}
+        name={name || id}
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
+        autoComplete={autoComplete}
+        required={required}
+        aria-required={required ? "true" : undefined}
         className="h-11 w-full rounded-[10px] border border-line bg-ivory px-3.5 text-sm text-ink placeholder:text-stone/70 focus:border-navy focus:outline-none"
       />
     </div>

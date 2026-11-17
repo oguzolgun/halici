@@ -51,7 +51,7 @@ export function CollectionProductList({
       "160x230",
       "200x290",
     ];
-    return Array.from(set).sort((a, b) => {
+    return Array.from(set).toSorted((a, b) => {
       const idxA = order.indexOf(a);
       const idxB = order.indexOf(b);
       if (idxA !== -1 && idxB !== -1) return idxA - idxB;
@@ -69,21 +69,20 @@ export function CollectionProductList({
 
   // Sort filtered rugs
   const sortedRugs = useMemo(() => {
-    const list = [...filteredRugs];
     switch (sortBy) {
       case "price-asc":
-        return list.sort((a, b) => a.priceFrom - b.priceFrom);
+        return filteredRugs.toSorted((a, b) => a.priceFrom - b.priceFrom);
       case "price-desc":
-        return list.sort((a, b) => b.priceFrom - a.priceFrom);
+        return filteredRugs.toSorted((a, b) => b.priceFrom - a.priceFrom);
       case "rating":
-        return list.sort(
+        return filteredRugs.toSorted(
           (a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount
         );
       case "newest":
-        return list.sort((a, b) => (a.isNew === b.isNew ? 0 : a.isNew ? -1 : 1));
+        return filteredRugs.toSorted((a, b) => (a.isNew === b.isNew ? 0 : a.isNew ? -1 : 1));
       case "featured":
       default:
-        return list.sort((a, b) => {
+        return filteredRugs.toSorted((a, b) => {
           if (a.bestseller !== b.bestseller) return a.bestseller ? -1 : 1;
           return b.reviewCount - a.reviewCount;
         });

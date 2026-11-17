@@ -74,6 +74,12 @@ export function ContactFormClient() {
           <input
             id="contact-name"
             type="text"
+            name="name"
+            autoComplete="name"
+            required
+            aria-required="true"
+            aria-invalid={Boolean(error && !form.name.trim())}
+            aria-describedby={error ? "contact-form-error" : undefined}
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
             placeholder="Örn: Zeynep Yılmaz"
@@ -90,6 +96,12 @@ export function ContactFormClient() {
           <input
             id="contact-email"
             type="email"
+            name="email"
+            autoComplete="email"
+            required
+            aria-required="true"
+            aria-invalid={Boolean(error && !form.email.includes("@"))}
+            aria-describedby={error ? "contact-form-error" : undefined}
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             placeholder="ornek@eposta.com"
@@ -107,6 +119,7 @@ export function ContactFormClient() {
         </label>
         <select
           id="contact-subject"
+          name="subject"
           value={form.subject}
           onChange={(e) => setForm({ ...form, subject: e.target.value })}
           className="h-11 w-full rounded-[10px] border border-line bg-ivory px-3.5 text-sm text-ink focus:border-navy focus:outline-none"
@@ -127,7 +140,12 @@ export function ContactFormClient() {
         </label>
         <textarea
           id="contact-message"
+          name="message"
           rows={4}
+          required
+          aria-required="true"
+          aria-invalid={Boolean(error && !form.message.trim())}
+          aria-describedby={error ? "contact-form-error" : undefined}
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           placeholder="Odanızın ölçüsü veya merak ettiğiniz halı hakkında detayları paylaşabilirsiniz..."
@@ -136,7 +154,7 @@ export function ContactFormClient() {
       </div>
 
       {error && (
-        <p role="alert" className="text-xs font-medium text-terracotta-deep">
+        <p id="contact-form-error" role="alert" className="text-xs font-medium text-terracotta-deep">
           {error}
         </p>
       )}
