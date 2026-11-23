@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Layers,
-  Palette,
-  ShieldCheck,
-  Sofa,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -108,7 +101,7 @@ export default function GuidePage() {
       <section className="py-16 sm:py-20">
         <Container className="space-y-10">
           <SectionHeading
-            eyebrow="01 • Alan & Fonksiyon"
+            eyebrow="Alan & Fonksiyon"
             title="Her Odanın İhtiyacı Farklıdır"
             subtitle="Salonun şıklığından mutfağın pratikliğine, hangi odaya hangi dokunun uygun olduğunu keşfedin."
             actionLabel="Tüm odaları incele"
@@ -123,9 +116,6 @@ export default function GuidePage() {
               >
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sand text-navy">
-                      <Sofa className="h-3.5 w-3.5" aria-hidden="true" />
-                    </span>
                     <span className="text-xs font-semibold uppercase tracking-wider text-terracotta-deep">
                       {item.room}
                     </span>
@@ -166,8 +156,8 @@ export default function GuidePage() {
       <section className="border-t border-line bg-sand/30 py-16 sm:py-20">
         <Container className="space-y-10">
           <SectionHeading
-            eyebrow="02 • Ölçü & Orantı"
-            title="7 Standart Ebat ile Mobilya Uyumu"
+            eyebrow="Ölçü & Orantı"
+            title="Standart Ebatlar ile Mobilya Uyumu"
             subtitle="Küçük halı odayı daraltır, doğru ölçü mekanı ferahlatır. Hangi ölçü nerede kullanılmalı?"
           />
 
@@ -210,16 +200,13 @@ export default function GuidePage() {
       <section className="py-16 sm:py-20">
         <Container className="space-y-10">
           <SectionHeading
-            eyebrow="03 • Malzeme & Özellikler"
+            eyebrow="Malzeme & Özellikler"
             title="İhtiyacınıza Uygun Zemin Teknolojisi"
             subtitle="Yıkanabilirlik, kaymaz taban veya doğal iplikler: Hangisi sizin için doğru?"
           />
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-[14px] border border-line bg-ivory-soft p-5 space-y-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sand/75 text-navy">
-                <ShieldCheck className="h-5 w-5" aria-hidden="true" />
-              </span>
               <h3 className="font-editorial text-lg text-ink">Kaymaz Taban</h3>
               <p className="text-xs text-stone leading-relaxed">
                 Fayans, granit ve laminat parkelerde halının toplanmasını ve kaymasını engeller. Özellikle banyo ve koridorlarda güvenlik sağlar.
@@ -230,9 +217,6 @@ export default function GuidePage() {
             </div>
 
             <div className="rounded-[14px] border border-line bg-ivory-soft p-5 space-y-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sand/75 text-navy">
-                <Sparkles className="h-5 w-5" aria-hidden="true" />
-              </span>
               <h3 className="font-editorial text-lg text-ink">Makinede Yıkanabilir</h3>
               <p className="text-xs text-stone leading-relaxed">
                 Evcil hayvanlı ve çocuklu aileler için 30 derecede kolayca makinede yıkanabilen, hijyenik ve pratik temizlik avantajı.
@@ -243,9 +227,6 @@ export default function GuidePage() {
             </div>
 
             <div className="rounded-[14px] border border-line bg-ivory-soft p-5 space-y-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sand/75 text-navy">
-                <Layers className="h-5 w-5" aria-hidden="true" />
-              </span>
               <h3 className="font-editorial text-lg text-ink">Sisal & Jüt Halılar</h3>
               <p className="text-xs text-stone leading-relaxed">
                 Doğal bitkisel liflerden dokunur. Statik elektrik üretmez, tozu içine hapsetmez ve bohem/doğal bir zemin sıcaklığı verir.
@@ -256,9 +237,6 @@ export default function GuidePage() {
             </div>
 
             <div className="rounded-[14px] border border-line bg-ivory-soft p-5 space-y-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sand/75 text-navy">
-                <Palette className="h-5 w-5" aria-hidden="true" />
-              </span>
               <h3 className="font-editorial text-lg text-ink">Vintage & Eskitme</h3>
               <p className="text-xs text-stone leading-relaxed">
                 Geleneksel Türk motiflerinin modern soluk renklerle yeniden yorumlanması. Klasik ile çağdaş mobilyaları mükemmel dengeler.

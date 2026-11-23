@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Percent,
-  Scissors,
-  ShieldCheck,
-  Sparkles,
-  TreePine,
-  Waves,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -48,49 +39,41 @@ const SUB_CATEGORIES_DATA = [
   {
     title: "Outlet Ürünler",
     slug: "Outlet ürünler",
-    icon: Percent,
     desc: "Stok sonu ve sezon fırsatlarıyla sunulan indirimli birinci sınıf seriler.",
   },
   {
     title: "Vintage Halı",
     slug: "Vintage halı",
-    icon: Sparkles,
     desc: "Anadolu madalyon mirasından ilham alan, zamansız eskitme dokular.",
   },
   {
     title: "Koridor Halısı",
     slug: "Koridor halısı",
-    icon: ArrowRight,
     desc: "Geçiş alanları ve antreler için dayanıklı ve şık koridor yollukları.",
   },
   {
     title: "Kaymaz Taban",
     slug: "Kaymaz taban",
-    icon: ShieldCheck,
     desc: "Fayans ve parkede kayma yapmayan, güvenli zemin sabitleyici taban.",
   },
   {
     title: "Kesme Halı",
     slug: "Kesme halı",
-    icon: Scissors,
     desc: "Mekanınızın tam ölçüsüne göre özel kesilip kenarları overloklanan rulo halılar.",
   },
   {
     title: "Makinede Yıkanabilir",
     slug: "Makinede yıkanabilir",
-    icon: Waves,
     desc: "30 derecede kolayca yıkanabilen, leke tutmayan pratik aile serileri.",
   },
   {
     title: "Sisal & Jüt Halı",
     slug: "Sisal halı",
-    icon: TreePine,
     desc: "Katkısız bitki lifleri ve doğal jütten dokunan nefes alan organik yüzey.",
   },
   {
     title: "Dekoratif Halı",
     slug: "Dekoratif halı",
-    icon: CheckCircle2,
     desc: "Modern mimari desenlerle yaşam alanınızın odak noktasını oluşturan tasarımlar.",
   },
 ];
@@ -123,9 +106,9 @@ export default function CollectionsPage() {
       <section className="py-16 sm:py-20">
         <Container className="space-y-10">
           <SectionHeading
-            eyebrow="8 Temel Alan"
+            eyebrow="Temel Yaşam Alanları"
             title="Her Odanın Ruhuna Uygun Ana Koleksiyonlar"
-            subtitle="Evinizin farklı yaşam alanları için özel olarak tasarlanan 8 ana kategorimizi inceleyin."
+            subtitle="Evinizin farklı yaşam alanları için özel olarak tasarlanan ana kategorilerimizi inceleyin."
             actionLabel="Tüm kataloğu gör"
             actionHref="/halilar"
           />
@@ -185,32 +168,26 @@ export default function CollectionsPage() {
           />
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {SUB_CATEGORIES_DATA.map((sub) => {
-              const Icon = sub.icon;
-              return (
-                <Link
-                  key={sub.slug}
-                  href={`/koleksiyonlar/${CATEGORY_SLUG_MAP[sub.slug] || "vintage-hali"}`}
-                  className="group flex flex-col justify-between rounded-[14px] border border-line bg-ivory-soft p-5 transition-all duration-300 hover:-translate-y-1 hover:border-navy/40 hover:shadow-md"
-                >
-                  <div>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sand/80 text-navy transition-colors group-hover:bg-navy group-hover:text-ivory">
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                    </div>
-                    <h3 className="mt-4 font-editorial text-xl text-ink group-hover:text-navy">
-                      {sub.title}
-                    </h3>
-                    <p className="mt-2 text-xs leading-relaxed text-stone">
-                      {sub.desc}
-                    </p>
-                  </div>
-                  <div className="mt-5 flex items-center gap-1.5 text-xs font-semibold text-navy group-hover:text-terracotta-deep">
-                    <span>Modelleri İncele</span>
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                  </div>
-                </Link>
-              );
-            })}
+            {SUB_CATEGORIES_DATA.map((sub) => (
+              <Link
+                key={sub.slug}
+                href={`/koleksiyonlar/${CATEGORY_SLUG_MAP[sub.slug] || "vintage-hali"}`}
+                className="group flex flex-col justify-between rounded-[14px] border border-line bg-ivory-soft p-5 transition-all duration-300 hover:-translate-y-1 hover:border-navy/40 hover:shadow-md"
+              >
+                <div>
+                  <h3 className="font-editorial text-xl text-ink group-hover:text-navy">
+                    {sub.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-stone">
+                    {sub.desc}
+                  </p>
+                </div>
+                <div className="mt-5 flex items-center gap-1.5 text-xs font-semibold text-navy group-hover:text-terracotta-deep">
+                  <span>Modelleri İncele</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </div>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>

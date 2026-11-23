@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Award, Compass, HeartHandshake, Sparkles } from "lucide-react";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -15,22 +14,18 @@ export const metadata: Metadata = {
 
 const PILLARS = [
   {
-    icon: Award,
     title: "Yerli Dokuma Mirası",
     text: "Gaziantep, Uşak ve Denizli'deki köklü tezgahlarla doğrudan çalışıyor; her koleksiyonu uzun yıllar formunu koruyacak iplik yoğunluğunda üretiyoruz.",
   },
   {
-    icon: Compass,
     title: "Küratörlü Seçki",
     text: "Binlerce karmaşık desen yerine gerçek evlerin ışık, parke ve mobilya dengesine uyum sağlayan, küratörlü ve yalın bir koleksiyon sunuyoruz.",
   },
   {
-    icon: HeartHandshake,
     title: "Şeffaf Deneyim",
     text: "İplik türü, hav yüksekliği ve ölçü önerilerini açıkça paylaşıyor; 14 gün evde deneme ve kolay iade hakkıyla sürprizlere yer bırakmıyoruz.",
   },
   {
-    icon: Sparkles,
     title: "Aile Sağlığına Duyarlı",
     text: "Özellikle çocuk odası ve doğal serilerimizde OEKO-TEX Standart 100 sertifikalı, koku yapmayan, toz tutmayan organik iplikler kullanıyoruz.",
   },
@@ -113,25 +108,19 @@ export default function AboutPage() {
       <section className="border-t border-line bg-sand/30 py-14 sm:py-18">
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {PILLARS.map((pillar) => {
-              const Icon = pillar.icon;
-              return (
-                <div
-                  key={pillar.title}
-                  className="rounded-[14px] border border-line bg-ivory-soft p-6 shadow-[var(--shadow-soft)]"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-sand/80 text-navy">
-                    <Icon className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <h3 className="mt-4 font-editorial text-xl text-ink">
-                    {pillar.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-stone">
-                    {pillar.text}
-                  </p>
-                </div>
-              );
-            })}
+            {PILLARS.map((pillar) => (
+              <div
+                key={pillar.title}
+                className="rounded-[14px] border border-line bg-ivory-soft p-6 shadow-[var(--shadow-soft)]"
+              >
+                <h3 className="font-editorial text-xl text-ink">
+                  {pillar.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-stone">
+                  {pillar.text}
+                </p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>

@@ -7,7 +7,6 @@ import {
   CheckCircle2,
   ChevronDown,
   HelpCircle,
-  Ruler,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -309,14 +308,9 @@ export default async function CollectionDetailPage({
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {/* Features Checklist */}
               <div className="rounded-xl border border-line bg-ivory p-6 shadow-2xs space-y-4">
-                <div className="flex items-center gap-2.5">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-sand/70 text-navy">
-                    <Sparkles className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                  <h3 className="font-editorial text-lg text-ink">
-                    Öne Çıkan Özellikler
-                  </h3>
-                </div>
+                <h3 className="font-editorial text-lg text-ink">
+                  Öne Çıkan Özellikler
+                </h3>
                 <ul className="space-y-2 text-xs leading-relaxed text-stone">
                   {collection.features.map((feat, i) => (
                     <li key={i} className="flex items-start gap-2">
@@ -329,14 +323,9 @@ export default async function CollectionDetailPage({
 
               {/* Ideal Sizes */}
               <div className="rounded-xl border border-line bg-ivory p-6 shadow-2xs space-y-4">
-                <div className="flex items-center gap-2.5">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-sand/70 text-navy">
-                    <Ruler className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                  <h3 className="font-editorial text-lg text-ink">
-                    Tavsiye Edilen Ölçüler
-                  </h3>
-                </div>
+                <h3 className="font-editorial text-lg text-ink">
+                  Tavsiye Edilen Ölçüler
+                </h3>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {collection.idealSizes.map((sz, i) => (
                     <span
@@ -361,14 +350,9 @@ export default async function CollectionDetailPage({
 
               {/* Care & Maintenance */}
               <div className="rounded-xl border border-line bg-ivory p-6 shadow-2xs space-y-4">
-                <div className="flex items-center gap-2.5">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-sand/70 text-navy">
-                    <ShieldCheck className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                  <h3 className="font-editorial text-lg text-ink">
-                    Bakım ve Temizlik
-                  </h3>
-                </div>
+                <h3 className="font-editorial text-lg text-ink">
+                  Bakım ve Temizlik
+                </h3>
                 <ul className="space-y-2 text-xs leading-relaxed text-stone">
                   {collection.careTips.map((tip, i) => (
                     <li key={i} className="flex items-start gap-2">

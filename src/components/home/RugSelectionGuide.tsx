@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Compass, Palette, Ruler, Sofa } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
 
 const GUIDE_CARDS = [
   {
     key: "oda",
-    icon: Sofa,
-    eyebrow: "01 • Alana Göre",
+    eyebrow: "Alana Göre",
     title: "Yaşam alanınızın temposuna uygun doku",
     description:
       "Salon, mutfak, banyo, yatak odası veya koridor kullanımına göre ideal halıyı belirleyin.",
@@ -23,8 +22,7 @@ const GUIDE_CARDS = [
   },
   {
     key: "olcu",
-    icon: Ruler,
-    eyebrow: "02 • Ölçüye Göre",
+    eyebrow: "Ölçüye Göre",
     title: "Mobilyalarla orantılı doğru boyut",
     description:
       "80x150'den 200x290'a 7 standart ebatımızla mobilyalarınıza ve odanıza tam oturan ölçüyü seçin.",
@@ -39,8 +37,7 @@ const GUIDE_CARDS = [
   },
   {
     key: "stil",
-    icon: Compass,
-    eyebrow: "03 • Özelliğe Göre",
+    eyebrow: "Özelliğe Göre",
     title: "İhtiyacınıza uygun pratik zemin çözümleri",
     description:
       "Makinede yıkanabilir, kaymaz tabanlı, kesme veya otantik vintage serilerimizi keşfedin.",
@@ -55,8 +52,7 @@ const GUIDE_CARDS = [
   },
   {
     key: "renk",
-    icon: Palette,
-    eyebrow: "04 • Renge Göre",
+    eyebrow: "Renge Göre",
     title: "Gün ışığını ve parkeyi dengeleyen tonlar",
     description:
       "Sıcak krem ve topraktan derin laciverte, odanızın ışık dengesine göre palet belirleyin.",
@@ -85,7 +81,6 @@ export function RugSelectionGuide() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {GUIDE_CARDS.map((card) => {
-            const Icon = card.icon;
             return (
               <div
                 key={card.key}
@@ -95,9 +90,6 @@ export function RugSelectionGuide() {
                 <div className="flex flex-1 flex-col justify-between space-y-5">
                   <div>
                     <div className="flex items-center gap-2.5">
-                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sand/75 text-navy">
-                        <Icon className="h-4 w-4" aria-hidden="true" />
-                      </span>
                       <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
                         {card.eyebrow}
                       </span>

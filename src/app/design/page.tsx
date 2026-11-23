@@ -53,7 +53,7 @@ export default function DesignSystemPage() {
       <section className="py-14">
         <Container className="space-y-8">
           <SectionHeading
-            eyebrow="01 • Marka Kimliği"
+            eyebrow="Marka Kimliği"
             title="Logo & Sadeleştirilmiş Favicon"
             subtitle="PNG zeminden arındırılmış şeffaf vektör SVG ve 32 px okunabilirlik için tek kalın geometrili favicon sembolü."
           />
@@ -116,7 +116,7 @@ export default function DesignSystemPage() {
       <section className="border-t border-line py-14">
         <Container className="space-y-8">
           <SectionHeading
-            eyebrow="02 • Renk Tokenları"
+            eyebrow="Renk Tokenları"
             title="Palet ve Erişilebilirlik Kontrastı"
             subtitle="Tüm metin kombinasyonları WCAG AA (≥ 4.5:1) kontrast standardını karşılar."
           />
@@ -157,7 +157,7 @@ export default function DesignSystemPage() {
       <section className="border-t border-line py-14">
         <Container className="space-y-8">
           <SectionHeading
-            eyebrow="03 • Tipografi & Hareket"
+            eyebrow="Tipografi & Hareket"
             title="Fraunces 600 & Plus Jakarta Sans"
             subtitle="Başlıklarda sıkı harf aralıklı serif zarafeti; arayüzde yüksek okunabilirlik sunan modern sans."
           />
@@ -202,7 +202,7 @@ export default function DesignSystemPage() {
       <section className="border-t border-line py-14">
         <Container className="space-y-8">
           <SectionHeading
-            eyebrow="04 • Etkileşim Bileşenleri"
+            eyebrow="Etkileşim Bileşenleri"
             title="Butonlar, Rozetler, Fiyat Etiketi ve İskeletler"
           />
 
@@ -260,7 +260,7 @@ export default function DesignSystemPage() {
       <section className="py-6">
         <Container className="mb-4">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
-            05 • Güven Bandı (TrustBar)
+            Güven Bandı (TrustBar)
           </p>
         </Container>
         <TrustBar />
@@ -270,7 +270,7 @@ export default function DesignSystemPage() {
       <section className="py-14">
         <Container className="space-y-8">
           <SectionHeading
-            eyebrow="06 • Ürün Kartları"
+            eyebrow="Ürün Kartları"
             title="ProductCard & Yükleme İskeleti"
           />
 
