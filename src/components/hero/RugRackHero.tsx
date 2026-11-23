@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import {
   AnimatePresence,
@@ -19,7 +19,6 @@ import { useIsFinePointer } from "@/lib/hooks";
 import type { RugProduct } from "@/types/rug";
 import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
-import { PriceTag } from "../ui/PriceTag";
 
 interface RugRackHeroProps {
   rugs: RugProduct[];
@@ -379,6 +378,46 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
   };
 
   const activeRug = rugs[activeIndex] ?? rugs[0];
+  const [previewTab, setPreviewTab] = useState<"room" | "texture">("room");
+
+  // User manual size selection override per rug (keyed by rug.id)
+  const [selectedSizeByRug, setSelectedSizeByRug] = useState<Record<string, number>>({});
+
+  // Compute active size index: use user selection for this rug if set, otherwise default to popular 160x230 size
+  const defaultSizeIdx = useMemo(() => {
+    if (!activeRug.sizeOptions || activeRug.sizeOptions.length === 0) return 0;
+    const popularIdx = activeRug.sizeOptions.findIndex(
+      (s) => s.label.includes("160x230") || s.label.includes("160 x 230")
+    );
+    return popularIdx !== -1 ? popularIdx : 0;
+  }, [activeRug]);
+
+  const selectedSizeIdx = selectedSizeByRug[activeRug.id] ?? defaultSizeIdx;
+
+  const sizeOptions =
+    activeRug.sizeOptions && activeRug.sizeOptions.length > 0
+      ? activeRug.sizeOptions
+      : [
+          {
+            label: activeRug.sizes[0] || "160x230 cm",
+            widthCm: 160,
+            lengthCm: 230,
+            price: activeRug.priceFrom,
+            stock: 8,
+          },
+        ];
+
+  const currentSizeOption = sizeOptions[selectedSizeIdx] ?? sizeOptions[0];
+
+  const STYLE_TABS = [
+    { label: "Tüm Vitrin", targetIdx: 0 },
+    { label: "Doğal Jüt", targetIdx: 3 },
+    { label: "Vintage Eskitme", targetIdx: 1 },
+    { label: "Mimari Kabartma", targetIdx: 0 },
+    { label: "Doğal Yün", targetIdx: 5 },
+    { label: "Çocuk Odası", targetIdx: 6 },
+  ];
+
   const minTrackX = -(rugs.length - 1 - initialIndex) * step;
   const maxTrackX = initialIndex * step;
   const progressPercent = ((activeIndex + 1) / rugs.length) * 100;
@@ -402,6 +441,19 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/82 to-ivory/95" />
       </div>
+
+      {/* Editorial Hero Presentation Heading */}
+      <Container className="relative z-20 mb-4 sm:mb-6 text-center max-w-3xl">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-terracotta-deep">
+          Seç Halı Showroom Koleksiyonu
+        </p>
+        <h1 className="mt-1 font-editorial text-2xl sm:text-3xl lg:text-[40px] leading-[1.14] text-ink">
+          Evinize yakışan halıyı güvenle seçin.
+        </h1>
+        <p className="mx-auto mt-2 max-w-xl text-xs sm:text-sm leading-relaxed text-stone">
+          Askıdaki halıları sürükleyerek veya ok tuşlarıyla dokuları inceleyin; odanıza ve bütçenize en uygun ebatı anında keşfedin.
+        </p>
+      </Container>
 
       {/* Interactive Hanging Rack Carousel Stage */}
       <div
@@ -504,25 +556,50 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
         )}
       </div>
 
+      {/* Visual Focal Pointer connecting hanging rack to the exhibition console */}
+      <div className="relative z-20 flex justify-center -mb-2.5 pointer-events-none">
+        <div className="inline-flex items-center gap-1.5 rounded-full border border-line bg-ivory/95 px-3.5 py-1 text-[11px] font-semibold text-navy shadow-xs backdrop-blur-md">
+          <span className="h-1.5 w-1.5 rounded-full bg-terracotta animate-pulse" />
+          <span>Şu An İncelenen Halı Künyesi</span>
+        </div>
+      </div>
+
       {/* Unified Showroom Exhibition Console */}
-      <Container className="relative z-20 pb-10 pt-2 sm:pb-14">
-        <div className="overflow-hidden rounded-2xl border border-line bg-ivory-soft/95 shadow-[0_16px_44px_rgba(20,33,58,0.06)] backdrop-blur-md">
-          {/* Top Utility Bar: Live Showroom Badge + Integrated Rack Controls */}
-          <div className="flex flex-col gap-3 border-b border-line/75 bg-sand/35 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-7 sm:py-3.5">
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-2 w-2 rounded-full bg-terracotta animate-pulse" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy">
-                Canlı Showroom Rafı
-              </span>
-              <span className="hidden text-stone/50 sm:inline" aria-hidden="true">
-                •
-              </span>
-              <span className="hidden text-xs text-stone sm:inline">
-                Sürükleyin veya ok tuşlarıyla dokuları inceleyin
-              </span>
+      <Container className="relative z-20 pb-10 pt-1 sm:pb-14">
+        <div className="overflow-hidden rounded-2xl border border-line bg-ivory-soft/95 shadow-[0_16px_44px_rgba(20,33,58,0.08)] backdrop-blur-md">
+          {/* Top Utility Bar: Live Showroom Badge + Style Jump Filters + Navigation */}
+          <div className="flex flex-col gap-3 border-b border-line/75 bg-sand/35 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-7 sm:py-3.5">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              <div className="flex items-center gap-2">
+                <span className="flex h-2 w-2 rounded-full bg-terracotta animate-pulse" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy">
+                  Canlı Showroom Rafı
+                </span>
+              </div>
+
+              {/* Style Quick Jump Chips (Desktop & Tablet) */}
+              <div className="hidden lg:flex items-center gap-1.5 ml-3 border-l border-line/80 pl-3">
+                {STYLE_TABS.map((tab) => {
+                  const isCurrent = activeIndex === tab.targetIdx;
+                  return (
+                    <button
+                      key={tab.label}
+                      type="button"
+                      onClick={() => snapToIndex(tab.targetIdx)}
+                      className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors cursor-pointer ${
+                        isCurrent
+                          ? "bg-navy text-ivory font-semibold shadow-2xs"
+                          : "text-stone hover:bg-sand/60 hover:text-ink"
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* Integrated Controls */}
+            {/* Slide Navigation & Indicator */}
             <div className="flex items-center justify-between gap-3 sm:justify-end">
               <button
                 type="button"
@@ -549,7 +626,7 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
                   aria-valuemin={1}
                   aria-valuemax={rugs.length}
                   aria-valuenow={activeIndex + 1}
-                  className="relative h-1.5 w-24 sm:w-36 overflow-hidden rounded-full bg-sand"
+                  className="relative h-1.5 w-20 sm:w-28 overflow-hidden rounded-full bg-sand"
                 >
                   <div
                     className="h-full rounded-full bg-navy transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
@@ -570,31 +647,86 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
             </div>
           </div>
 
-          {/* Main Console Body: 2 Columns smoothly integrated with a subtle divider */}
+          {/* Main Console Body: 2 Columns */}
           <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-line/75">
-            {/* Left Column: Editorial Headline & Brand CTA */}
-            <div className="flex flex-col justify-between p-6 sm:p-7 lg:col-span-5 space-y-4">
-              <div className="space-y-2.5">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-terracotta-deep">
-                  Seç Halı Showroom Koleksiyonu
-                </p>
-                <h1 className="font-editorial text-2xl leading-[1.12] text-ink sm:text-3xl lg:text-[32px]">
-                  Evinize yakışan halıyı seçin.
-                </h1>
-                <p className="text-xs sm:text-sm leading-relaxed text-stone">
-                  Binlerce halı, güvenle seçin. Rafı sürükleyerek veya ok tuşlarıyla koleksiyonu keşfedin.
-                </p>
+            {/* Left Column: Living Space & Sensory Studio (5 cols) */}
+            <div className="flex flex-col justify-between p-5 sm:p-7 lg:col-span-5 bg-sand/15 space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
+                    Mekan & Doku Önizlemesi
+                  </span>
+                  {/* Mode switcher tabs */}
+                  <div className="inline-flex rounded-lg border border-line bg-ivory p-0.5 text-xs">
+                    <button
+                      type="button"
+                      onClick={() => setPreviewTab("room")}
+                      className={`rounded-md px-2.5 py-1 text-[11px] font-medium transition-colors cursor-pointer ${
+                        previewTab === "room"
+                          ? "bg-navy text-ivory shadow-2xs font-semibold"
+                          : "text-stone hover:text-ink"
+                      }`}
+                    >
+                      Ev Ortamı
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setPreviewTab("texture")}
+                      className={`rounded-md px-2.5 py-1 text-[11px] font-medium transition-colors cursor-pointer ${
+                        previewTab === "texture"
+                          ? "bg-navy text-ivory shadow-2xs font-semibold"
+                          : "text-stone hover:text-ink"
+                      }`}
+                    >
+                      Doku Detayı
+                    </button>
+                  </div>
+                </div>
+
+                {/* Preview Viewport */}
+                <div className="group relative h-48 sm:h-52 w-full overflow-hidden rounded-xl border border-line bg-ivory shadow-inner">
+                  <Image
+                    src={
+                      previewTab === "room"
+                        ? (activeRug.gallery[1] || activeRug.image)
+                        : (activeRug.gallery[2] || activeRug.image)
+                    }
+                    alt={`${activeRug.name} ${previewTab === "room" ? "ev ortamı görünümü" : "doku detayı"}`}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 420px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-ivory text-xs">
+                    <span className="font-medium drop-shadow-xs">
+                      {previewTab === "room" ? "🛋️ Gerçek Zemin Perspektifi" : "🧶 Yakın Plan Dokuma & İplik"}
+                    </span>
+                    <span className="text-[10px] bg-ink/50 px-2 py-0.5 rounded-full backdrop-blur-xs">
+                      {activeRug.weavingType}
+                    </span>
+                  </div>
+                </div>
               </div>
 
-              <div className="pt-2">
-                <Button href="/koleksiyonlar" variant="secondary" size="md">
-                  Tüm Koleksiyonu Gör
-                </Button>
+              {/* 3 Practical Life Trust Badges */}
+              <div className="grid grid-cols-3 gap-2 border-t border-line/75 pt-3 text-center">
+                <div className="rounded-lg bg-ivory/80 p-2 border border-line/60">
+                  <p className="text-[10px] font-medium text-stone">Hav Kalınlığı</p>
+                  <p className="text-xs font-semibold text-ink mt-0.5">{activeRug.pileHeightMm} mm</p>
+                </div>
+                <div className="rounded-lg bg-ivory/80 p-2 border border-line/60">
+                  <p className="text-[10px] font-medium text-stone">Robot Süpürge</p>
+                  <p className="text-xs font-semibold text-navy mt-0.5">%100 Uyumlu</p>
+                </div>
+                <div className="rounded-lg bg-ivory/80 p-2 border border-line/60">
+                  <p className="text-[10px] font-medium text-stone">Leke Dayanımı</p>
+                  <p className="text-xs font-semibold text-terracotta-deep mt-0.5">Kolay Silinir</p>
+                </div>
               </div>
             </div>
 
-            {/* Right Column: Dynamic Active Rug Details */}
-            <div className="flex flex-col justify-center p-6 sm:p-7 lg:col-span-7 bg-ivory/50">
+            {/* Right Column: Dynamic Active Rug Details & Size/Price Matrix (7 cols) */}
+            <div className="flex flex-col justify-between p-5 sm:p-7 lg:col-span-7 bg-ivory/40 space-y-4">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeRug.id}
@@ -602,42 +734,119 @@ export function RugRackHero({ rugs }: RugRackHeroProps) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -6 }}
                   transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-                  className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center"
+                  className="space-y-4"
                 >
-                  <div className="min-w-0 flex-1 space-y-2">
-                    <div className="flex flex-wrap items-center gap-2">
+                  {/* Top badges: Collection, Material & Star rating */}
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
                       <span className="rounded-full bg-sand/80 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-terracotta-deep">
                         {activeRug.collection}
                       </span>
-                      <span aria-hidden="true" className="text-stone/40">
-                        •
-                      </span>
+                      <span aria-hidden="true" className="text-stone/40">•</span>
                       <span className="text-xs font-medium text-stone">
                         {activeRug.material}
                       </span>
                     </div>
 
-                    <h2 className="truncate font-editorial text-xl text-ink sm:text-2xl lg:text-[26px]">
-                      {activeRug.name}
-                    </h2>
-
-                    <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-stone">
-                      <span className="font-medium text-ink">Ölçüler:</span>
-                      <span className="text-[11px] sm:text-xs">
-                        {activeRug.sizes.join(" · ")}
-                      </span>
+                    <div className="flex items-center gap-1.5 text-xs text-ink">
+                      <div className="flex text-amber-500">
+                        {"★".repeat(5)}
+                      </div>
+                      <span className="font-semibold">{activeRug.rating}</span>
+                      <span className="text-stone text-[11px]">({activeRug.reviewCount} Değerlendirme)</span>
                     </div>
                   </div>
 
-                  <div className="flex shrink-0 flex-col items-start gap-2.5 border-t border-line/70 pt-3 sm:items-end sm:border-t-0 sm:pt-0">
-                    <PriceTag amount={activeRug.priceFrom} fromPrefix size="lg" />
+                  {/* Title & Short Description */}
+                  <div>
+                    <h2 className="font-editorial text-2xl sm:text-3xl text-ink">
+                      {activeRug.name}
+                    </h2>
+                    <p className="mt-1 text-xs sm:text-sm text-stone leading-relaxed line-clamp-2">
+                      {activeRug.shortDescription}
+                    </p>
+                  </div>
+
+                  {/* Interactive Size Selector Pills */}
+                  <div className="space-y-2 border-t border-line/75 pt-3">
+                    <div className="flex items-center justify-between">
+                      <label className="text-xs font-semibold text-ink">
+                        Ölçü Seçin:
+                      </label>
+                      <span className="text-[11px] text-stone">
+                        {currentSizeOption.isRunner ? "Koridor / Yolluk boyutu" : "Salon & Yaşam boyutu"}
+                      </span>
+                    </div>
+
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      {sizeOptions.map((opt, sIdx) => {
+                        const isSelected = sIdx === (sizeOptions[selectedSizeIdx] ? selectedSizeIdx : 0);
+                        const isPopular = opt.label.includes("160x230") || opt.label.includes("160 x 230");
+                        return (
+                          <button
+                            key={opt.label}
+                            type="button"
+                            onClick={() =>
+                              setSelectedSizeByRug((prev) => ({
+                                ...prev,
+                                [activeRug.id]: sIdx,
+                              }))
+                            }
+                            className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition-all cursor-pointer ${
+                              isSelected
+                                ? "border-navy bg-navy text-ivory shadow-xs font-semibold"
+                                : "border-line bg-ivory text-ink hover:border-navy/50 hover:bg-sand/40"
+                            }`}
+                          >
+                            <span>{opt.label.replace(" cm", "")} cm</span>
+                            {isPopular && (
+                              <span className={`ml-1 text-[9px] font-semibold ${isSelected ? "text-sand" : "text-terracotta-deep"}`}>
+                                ★ Popüler
+                              </span>
+                            )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Price & Guarantee Row */}
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 border-t border-line/75 pt-3">
+                    <div>
+                      <div className="flex items-baseline gap-2">
+                        <span className="font-editorial text-3xl font-bold text-navy">
+                          {formatTRY(currentSizeOption.price)}
+                        </span>
+                        <span className="text-xs text-stone">KDV Dahil</span>
+                      </div>
+                      <p className="mt-0.5 text-[11px] text-stone">
+                        Seçili ölçü için net fiyattır · Stokta son {currentSizeOption.stock} adet
+                      </p>
+                    </div>
+
+                    <div className="text-[11px] text-terracotta-deep font-medium">
+                      ✓ Ücretsiz Sigortalı Kargo
+                    </div>
+                  </div>
+
+                  {/* Dual Action CTAs */}
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-1">
+                    <Button
+                      href={`/halilar/${activeRug.slug}?size=${encodeURIComponent(currentSizeOption.label)}`}
+                      variant="primary"
+                      size="lg"
+                      className="flex-1 justify-center"
+                    >
+                      Halıyı İncele & Sipariş Ver →
+                    </Button>
 
                     <Button
-                      href={`/halilar/${activeRug.slug}`}
-                      variant="primary"
-                      size="md"
+                      href={`/iletisim?numune=${encodeURIComponent(activeRug.name)}`}
+                      variant="secondary"
+                      size="lg"
+                      className="justify-center"
                     >
-                      Halıyı İncele
+                      Ücretsiz Numune İste
                     </Button>
                   </div>
                 </motion.div>
